@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "golemorph"
+version = "2.0.0"
+description = "Complete, coherent synthetic personas for authorized red team spearphishing campaigns: name, email, phone, backstory."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = ["PyYAML>=6.0"]
+
+[dependency-groups]
+# names-dataset provides the source data for scripts/generate_name_data.py.
+dev = ["pytest>=8.0", "names-dataset>=3.3.0"]
+
+[project.scripts]
+golemorph = "golemorph.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["golemorph*"]
+
+[tool.setuptools.package-data]
+golemorph = ["data/*.yaml", "data/*/*.csv"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

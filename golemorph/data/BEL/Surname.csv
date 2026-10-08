@@ -1,0 +1,501 @@
+name,frequency
+Peeters,1000000
+Janssens,500000
+Maes,333333
+Jacobs,250000
+Mertens,200000
+Willems,166667
+Claes,142857
+Wouters,125000
+Goossens,111111
+Dubois,100000
+Vermeulen,90909
+De Smet,83333
+Hermans,76923
+Pauwels,71429
+Diallo,66667
+Aerts,62500
+Dupont,58824
+Lambert,55556
+El,52632
+Ben,50000
+Michiels,47619
+Martens,45455
+Smets,43478
+Janssen,41667
+Desmet,40000
+De Vos,38462
+Claeys,37037
+Van Damme,35714
+Devos,34483
+Stevens,33333
+Hendrickx,32258
+De Clercq,31250
+Simon,30303
+Lemmens,29412
+Segers,28571
+Dhondt,27778
+Van Den Broeck,27027
+De Backer,26316
+Laurent,25641
+Van De Velde,25000
+Michel,24390
+Coppens,23810
+Denis,23256
+Dumont,22727
+Leroy,22222
+Verhoeven,21739
+Bah,21277
+Wauters,20833
+Cools,20408
+Smet,20000
+Vdb,19608
+Thys,19231
+Declercq,18868
+Renard,18519
+Leclercq,18182
+Lejeune,17857
+Petit,17544
+Mathieu,17241
+Timmermans,16949
+De Smedt,16667
+Lenaerts,16393
+De Wilde,16129
+Yilmaz,15873
+Cornelis,15625
+De Cock,15385
+De Meyer,15152
+Robert,14925
+Baert,14706
+Verstraete,14493
+Lambrechts,14286
+Vandenberghe,14085
+Verheyen,13889
+Lauwers,13699
+Geerts,13514
+De Ridder,13333
+De Pauw,13158
+Bernard,12987
+Bertrand,12821
+Jansen,12658
+Bosmans,12500
+Bogaert,12346
+Christiaens,12195
+Lemaire,12048
+Verbeke,11905
+Vermeiren,11765
+Van Den Bossche,11628
+Pieters,11494
+Verlinden,11364
+Thijs,11236
+Bauwens,11111
+Barry,10989
+Moens,10870
+Charlier,10753
+Beckers,10638
+Deprez,10526
+Claessens,10417
+Legrand,10309
+Verschueren,10204
+Simons,10101
+Verstraeten,10000
+Wuyts,9901
+Lefebvre,9804
+Vermeersch,9709
+Evrard,9615
+Fontaine,9524
+Carlier,9434
+Van Dyck,9346
+Bogaerts,9259
+Gerard,9174
+Vandamme,9091
+Heylen,9009
+Gielen,8929
+François,8850
+De Groote,8772
+Louis,8696
+Jacques,8621
+Goethals,8547
+Vandevelde,8475
+Bxl,8403
+Collard,8333
+Kaya,8264
+Verhaeghe,8197
+Thiry,8130
+Henry,8065
+Van Hoof,8000
+Lievens,7937
+Dierckx,7874
+Ceulemans,7812
+Nijs,7752
+Callens,7692
+Verhelst,7634
+Marchal,7576
+De Bruyn,7519
+Cuypers,7463
+Van Hecke,7407
+Pierre,7353
+Moreau,7299
+Delvaux,7246
+Van Den Bergh,7194
+Luyten,7143
+Van Acker,7092
+De Witte,7042
+Nys,6993
+Daems,6944
+Noel,6897
+Vervoort,6849
+Verhaegen,6803
+Mortier,6757
+De Coninck,6711
+Raes,6667
+Peters,6623
+Vercammen,6579
+Guillaume,6536
+Mahieu,6494
+Matthys,6452
+Herman,6410
+Antoine,6369
+De Bruyne,6329
+Francois,6289
+De Coster,6250
+Verhulst,6211
+Olivier,6173
+Parmentier,6135
+Roels,6098
+Verbruggen,6061
+Somers,6024
+Andries,5988
+Van Hove,5952
+Vanneste,5917
+De Bock,5882
+Declerck,5848
+Dewulf,5814
+Vandewalle,5780
+De Winter,5747
+Jans,5714
+Verdonck,5682
+Smeets,5650
+Decock,5618
+Vercauteren,5587
+Bastin,5556
+De Decker,5525
+Swinnen,5495
+Claus,5464
+Vanhove,5435
+Leemans,5405
+Vercruysse,5376
+Vincent,5348
+Nicolas,5319
+Van Den Berghe,5291
+Huysmans,5263
+De Wolf,5236
+Lefevre,5208
+Hubert,5181
+Coenen,5155
+Baeyens,5128
+Verbeeck,5102
+Deckers,5076
+Servais,5051
+Vos,5025
+De Clerck,5000
+Smits,4975
+Rousseau,4950
+Remy,4926
+Moons,4902
+Geens,4878
+Toussaint,4854
+Verheyden,4831
+Engelen,4808
+Descamps,4785
+Joris,4762
+Bruxelles,4739
+Houben,4717
+Van Goethem,4695
+Sterckx,4673
+Van Daele,4651
+Demir,4630
+Marc,4608
+Engels,4587
+Gillet,4566
+De Keyser,4545
+Collin,4525
+Dierickx,4505
+Huybrechts,4484
+Temmerman,4464
+De Wit,4444
+Schepers,4425
+Philippe,4405
+Maertens,4386
+Sow,4367
+Lebrun,4348
+Vanhoutte,4329
+Meeus,4310
+Goffin,4292
+De Boeck,4274
+Van Den Eynde,4255
+Reynders,4237
+Goris,4219
+De Waele,4202
+Vandeputte,4184
+Cornet,4167
+Van Den Bosch,4149
+Lacroix,4132
+Yildirim,4115
+Luyckx,4098
+Roland,4082
+Meert,4065
+Boonen,4049
+Bekaert,4032
+Vandendriessche,4016
+Driesen,4000
+Eeckhout,3984
+Piette,3968
+Vaes,3953
+Daniels,3937
+Georges,3922
+De Moor,3906
+Lecomte,3891
+Bollen,3876
+Marien,3861
+Dujardin,3846
+Massart,3831
+Vandaele,3817
+Vermeire,3802
+Nuyts,3788
+Debruyne,3774
+Libert,3759
+Schmitz,3745
+André,3731
+Decoster,3717
+Bracke,3704
+De Schepper,3690
+Van Den Brande,3676
+Michaux,3663
+De Laet,3650
+Yildiz,3636
+Vandenbussche,3623
+Torfs,3610
+Dewaele,3597
+Helsen,3584
+Lambrecht,3571
+Ooms,3559
+Desmedt,3546
+Baeten,3534
+Bourgeois,3521
+Vranken,3509
+Patrick,3497
+Heymans,3484
+Huyghe,3472
+Meunier,3460
+Vandenbroucke,3448
+Blomme,3436
+Gilles,3425
+Camara,3413
+Bou,3401
+Callewaert,3390
+De Jonghe,3378
+Poncelet,3367
+Gilson,3356
+De Greef,3344
+De Bie,3333
+Van Looy,3322
+Verbist,3311
+Gérard,3300
+Hardy,3289
+Boone,3279
+De Paepe,3268
+Vrancken,3257
+Leys,3247
+Dogan,3236
+Van Camp,3226
+Cuvelier,3215
+Verelst,3205
+Moerman,3195
+Bonte,3185
+Dhont,3175
+Piron,3165
+Can,3155
+Etienne,3145
+Boulanger,3135
+Everaert,3125
+Delhaye,3115
+Van Roy,3106
+Leysen,3096
+Schepens,3086
+Carpentier,3077
+Andre,3067
+Poppe,3058
+Govaerts,3049
+Van De Walle,3040
+Merckx,3030
+Sahin,3021
+Dufour,3012
+Baetens,3003
+Hoste,2994
+Leonard,2985
+Luc,2976
+Masson,2967
+Tanghe,2959
+Bodart,2950
+Colson,2941
+Naessens,2933
+Jonckheere,2924
+Van Herck,2915
+Wellens,2907
+Cox,2899
+Kara,2890
+Van Assche,2882
+Vanderstraeten,2874
+Van De Voorde,2865
+Noël,2857
+De Roeck,2849
+Collignon,2841
+Kevin,2833
+Muller,2825
+Van Belle,2817
+Borremans,2809
+Van Laere,2801
+Vandekerckhove,2793
+Abdel,2786
+Van Driessche,2778
+De Baets,2770
+De Maeyer,2762
+Vanderheyden,2755
+Adams,2747
+Tack,2740
+Franck,2732
+Theys,2725
+Verboven,2717
+Léonard,2710
+Moors,2703
+Albert,2695
+Kurt,2688
+Pollet,2681
+Van Gorp,2674
+Christophe,2667
+Ozdemir,2660
+Viaene,2653
+Renders,2646
+Philips,2639
+Marchand,2632
+Callebaut,2625
+Allard,2618
+Roelandt,2611
+Colin,2604
+Celik,2597
+Van Loo,2591
+Delfosse,2584
+De Vuyst,2577
+Dumoulin,2571
+Aydin,2564
+Van Dessel,2558
+Lippens,2551
+Pattyn,2545
+Jacquet,2538
+Casier,2532
+Vanderlinden,2525
+Urbain,2519
+Melis,2513
+Laenen,2506
+Samyn,2500
+De Sutter,2494
+Dewitte,2488
+Jean,2481
+Clement,2475
+Denys,2469
+Dobbelaere,2463
+Lecocq,2457
+Bertels,2451
+Timmerman,2445
+Van Dijck,2439
+Van Den Heuvel,2433
+Belgium,2427
+Dupuis,2421
+Van Laer,2415
+Pirard,2410
+Horemans,2404
+Berger,2398
+Dethier,2392
+Brasseur,2387
+Rutten,2381
+Mestdagh,2375
+Loos,2370
+Joos,2364
+Staelens,2358
+Bodson,2353
+Michielsen,2347
+Van Loon,2342
+De Neve,2336
+Hellemans,2331
+Geeraerts,2326
+Dejonghe,2320
+Be,2315
+Roose,2309
+Pirotte,2304
+Depoorter,2299
+Demoulin,2294
+Willaert,2288
+Heyvaert,2283
+De Graeve,2278
+Dhaese,2273
+Buelens,2268
+Demuynck,2262
+Delmotte,2257
+Vandecasteele,2252
+Cambier,2247
+De Cuyper,2242
+Bruyninckx,2237
+Goovaerts,2232
+Bruno,2227
+Vereecken,2222
+Mees,2217
+Vansteenkiste,2212
+Stas,2208
+Van Rompaey,2203
+Dekeyser,2198
+De Rycke,2193
+Arslan,2188
+Dewilde,2183
+Sels,2179
+Stroobants,2174
+Smolders,2169
+Ramaekers,2165
+Durieux,2160
+Roosen,2155
+Lammens,2151
+Celis,2146
+Gillard,2141
+Mercier,2137
+Dillen,2132
+Delcourt,2128
+Vh,2123
+Chevalier,2119
+Rosseel,2114
+Seghers,2110
+Put,2105
+Becker,2101
+Van Der Linden,2096
+Buysse,2092
+Degryse,2088
+De Meester,2083
+Arnould,2079
+Proost,2075
+Remacle,2070
+Godefroid,2066
+Mariën,2062
+Marechal,2058
+Fransen,2053
+Sabbe,2049
+Schoofs,2045
+Aslan,2041
+Meyers,2037
+Grégoire,2033
+Rogiers,2028
+Demeyer,2024
+Knockaert,2020
+Gregoire,2016
+Bruneel,2012
+De Block,2008
+Orban,2004
+Van Der Auwera,2000

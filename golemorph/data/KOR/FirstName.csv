@@ -1,0 +1,501 @@
+name,gender,frequency
+Hyun,Female,1239
+Sung,Male,984
+Jiyoung,Female,983
+Youngjin,Male,904
+Won,Male,844
+Sanghoon,Male,843
+Hyejin,Female,797
+Sangjin,Male,759
+Jinho,Male,756
+Junho,Male,756
+Jeong,Male,755
+Sangho,Male,754
+Hoon,Female,716
+Yoon,Female,716
+Minho,Male,715
+Young Ho,Male,701
+Soyoung,Female,672
+Eunyoung,Female,671
+Hyunsoo,Male,671
+Jaeho,Male,670
+Jiwon,Female,634
+Jihyun,Female,633
+Sanghyun,Male,633
+Sungho,Male,633
+Jaehyun,Male,608
+Hwang,Male,596
+Sunyoung,Female,596
+Hyunwoo,Male,595
+Sangmin,Male,595
+Sangwon,Male,595
+Youngho,Male,578
+Jaehoon,Male,573
+Jinsoo,Male,562
+Jinhee,Female,555
+Hyunju,Female,554
+Sungmin,Male,553
+Youngmin,Male,553
+Hoyoung,Male,551
+Jongmin,Male,547
+Dongjin,Male,544
+Eunkyung,Female,543
+Eunjin,Female,519
+Jihoon,Male,519
+Seung,Male,519
+Hyunjung,Female,518
+Taeho,Male,518
+Dong Hyun,Male,514
+Seungho,Male,514
+Minsu,Male,510
+Donghee,Male,505
+Insoo,Male,496
+Changho,Male,495
+Jong Ho,Male,487
+Sunghyun,Male,484
+Eunjoo,Female,481
+Jaewon,Male,481
+Youngmi,Female,481
+Heejung,Female,480
+Minwoo,Male,480
+Youngsun,Female,479
+Jongho,Male,474
+Jinwon,Male,469
+Young Soo,Male,468
+Youngsoo,Male,466
+Jinyoung,Female,464
+Eunho,Male,454
+Sungjin,Male,447
+Woojin,Male,443
+Jieun,Female,442
+Jiyeon,Female,442
+Yongho,Male,442
+Dongho,Male,441
+Hyojin,Female,441
+Junghyun,Female,441
+Seungmin,Male,441
+Sun Young,Female,441
+Donghyun,Male,440
+Hyunki,Male,440
+Sejin,Male,440
+Daeyoung,Male,439
+Jae Young,Male,438
+Sang Hyun,Male,438
+Inhwan,Male,436
+Taehoon,Male,434
+Sungwon,Male,433
+Seungjae,Male,422
+Sung Jin,Male,422
+Junyoung,Male,420
+Kyunghee,Female,416
+Jong Hyun,Male,415
+Jungsoo,Male,413
+Seunghwan,Male,411
+Ki Young,Male,410
+Sunghee,Female,409
+Jongwoo,Male,406
+Jihye,Female,403
+Jinwoo,Male,403
+Soojin,Female,403
+Joonho,Male,402
+Kwon,Male,402
+Kyung,Female,402
+Seunghyun,Male,402
+Sunhee,Female,402
+Jae Ho,Male,400
+Yong Jin,Male,400
+Hyunjoo,Female,398
+Mikyung,Female,398
+Jung Ho,Male,396
+Sang Ho,Male,396
+Sunghoon,Male,396
+Young Il,Male,395
+Misun,Female,394
+Hyunkyung,Female,392
+Wonsik,Male,392
+Eunsook,Female,388
+Youngkyu,Male,387
+Kyungho,Male,384
+Youngsu,Male,383
+Sangsoo,Male,380
+Eunhee,Female,378
+Younghee,Female,378
+Jaesung,Male,377
+Hojun,Male,373
+Taeyoung,Male,373
+Junghoon,Male,371
+Sang Jin,Male,370
+Dongil,Male,369
+Youngwoo,Male,369
+Hyunsuk,Male,368
+Sungwoo,Male,368
+Sung Hun,Male,367
+Baek,Female,366
+Minki,Female,366
+Eun Young,Female,365
+Jongsu,Male,365
+Yeon,Female,365
+Yongjin,Male,365
+Yongki,Male,365
+Young Chul,Male,365
+Eunju,Female,364
+Inchul,Male,364
+Minjung,Female,364
+Miyoung,Female,364
+Seunghee,Female,364
+Yonghee,Female,364
+Jung Hoon,Male,363
+Sungchul,Male,363
+Chul,Male,361
+Yongsik,Male,361
+Dongyoung,Male,360
+Seong,Male,360
+Sangchul,Male,359
+Sunghwan,Male,359
+Jinwook,Male,358
+Jonghyun,Male,358
+Kwangho,Male,356
+Wonho,Male,355
+Seungwon,Male,354
+Sangkyu,Male,353
+Wook,Male,353
+Hyerim,Female,351
+Jeongho,Male,348
+Yunho,Male,347
+Young Gil,Male,344
+Young Hee,Female,343
+Sangyong,Male,342
+Seung Ho,Male,342
+Seok,Female,341
+Sanghun,Male,340
+Woosik,Male,340
+Minjeong,Female,339
+Jaewook,Male,338
+Young Sun,Female,337
+Jihee,Female,335
+Jinkyu,Male,332
+Insung,Male,331
+Jae Hoon,Male,331
+Kyungsoo,Male,330
+Sang Woo,Male,330
+Hojin,Male,329
+Jungho,Male,328
+Soo Hyun,Female,328
+Heejin,Female,327
+Inho,Male,327
+Juhyun,Female,327
+Sang Jun,Male,327
+Sangwook,Male,327
+Soyeon,Female,327
+Insu,Male,326
+Jae Hyun,Male,326
+Jaeyoung,Male,326
+Jeongeun,Female,326
+Kiho,Male,326
+Seungwoo,Male,326
+Seyoung,Female,326
+Taesung,Male,326
+Minsoo,Male,325
+Young Jae,Male,325
+Hayoung,Female,324
+Jeonghoon,Male,323
+Jin Ho,Male,322
+Eun Hee,Female,321
+Seung Hoon,Male,321
+Soo Young,Female,320
+Donghoon,Male,319
+Jun Ho,Male,319
+Minchul,Male,318
+Seung Hyun,Male,318
+Yonghwan,Male,317
+Changwoo,Male,316
+Kijong,Male,315
+Hyunjin,Female,313
+Cheol,Male,312
+Sang Hun,Male,312
+Woosung,Male,312
+Young Min,Male,312
+Kitae,Male,310
+Minsuk,Male,310
+Youngsik,Male,310
+Changsoo,Male,309
+Sang Yong,Male,308
+Eunsuk,Female,305
+Hongseok,Male,302
+Jaewoo,Male,302
+Jinseok,Male,302
+Jaemin,Male,301
+Jin Young,Male,301
+Mihee,Female,301
+Tae Ho,Male,301
+Youngjoo,Female,301
+Hyunho,Male,300
+Sung Hwan,Male,300
+Hyun Woo,Male,299
+Jonghwan,Male,298
+Sung Min,Male,298
+Youngil,Male,298
+Heewon,Female,297
+Dong Jin,Male,296
+Jaesik,Male,296
+Seunghun,Male,296
+Sung Ho,Male,296
+Jae Yong,Male,292
+Tae Hoon,Male,292
+Daewon,Male,291
+Byunghoon,Male,290
+Donghwan,Male,290
+Eun Jung,Female,290
+Hyuk,Male,290
+Jung Hwan,Male,290
+So Young,Female,289
+Dongsoo,Male,288
+Woo Sung,Male,287
+Jeongmin,Female,286
+Jungjin,Male,286
+Jaekyung,Male,283
+Sungsu,Male,283
+Donghun,Male,282
+Jisun,Female,282
+Jungwoo,Male,282
+Misuk,Female,282
+Changmin,Male,281
+Daeho,Male,281
+Dongmin,Male,281
+Hyeyoung,Female,281
+Hyunjun,Male,281
+Ji Young,Female,281
+Jinju,Female,281
+Jungsuk,Female,281
+Kwang,Male,281
+Minkyung,Female,281
+Seongjin,Male,281
+Wonjin,Male,281
+Wonjun,Male,281
+Dongwook,Male,280
+Jonghoon,Male,280
+Jungeun,Female,280
+Hyun Jin,Female,279
+Sunguk,Male,279
+Sang Wook,Male,278
+Sukhee,Male,278
+Sunkyung,Female,278
+Dongkyu,Male,277
+Sang Chul,Male,276
+Sangsu,Male,276
+Sooyoung,Female,276
+Sungbae,Male,276
+Jongtae,Male,275
+Yong Hee,Male,275
+Ju Hyun,Female,274
+Junghee,Female,274
+Sangdon,Male,274
+Seung Jin,Male,274
+Jongwoon,Male,272
+Young Hwan,Male,272
+Youngran,Female,272
+Jinsung,Male,269
+Jongmoon,Male,268
+Sunhwa,Female,268
+Jonghee,Female,267
+Sangsun,Male,267
+Yong Hyun,Male,267
+Hyun Joo,Female,266
+Sungsoo,Male,266
+Kiwon,Male,265
+Chanho,Male,264
+Daesung,Male,264
+Jae Hwan,Male,264
+Ji Hyun,Female,264
+Kidong,Male,264
+Youngjoon,Male,264
+Heungsoo,Male,263
+Ho Chul,Male,263
+Ilsoo,Male,262
+Jaegon,Male,262
+Mi Kyung,Female,262
+Wonju,Female,262
+Youngjun,Male,261
+Dong Won,Male,260
+Kijung,Male,260
+Yonghyun,Male,260
+Cheolmin,Male,259
+Sangyoung,Male,259
+Seungyong,Male,259
+Yong Kyu,Male,259
+Youngchul,Male,259
+Eunja,Female,258
+Sanghee,Female,258
+Jungsik,Male,257
+Young Jin,Male,257
+Sangjun,Male,256
+Yongchul,Male,256
+Hyeon,Male,255
+Jong Hoon,Male,255
+Su Young,Male,255
+Sunho,Male,255
+Sunwoo,Male,255
+Insuk,Female,254
+Min Jeong,Female,254
+Ju Young,Female,253
+Tae Young,Male,252
+Daejin,Male,251
+Young Jun,Male,251
+Youngsam,Male,251
+Jeonghun,Male,250
+Miok,Female,250
+Sohyun,Female,250
+Inkyu,Male,249
+Mi Sook,Female,249
+Seung Hwan,Male,249
+Yunhee,Female,249
+Heesoon,Female,248
+Jin Soo,Male,248
+Jaeeun,Female,247
+Jongwon,Male,247
+Jaehwan,Male,246
+Young Kyu,Male,246
+Hyunsook,Female,245
+Sung Jun,Male,244
+Taewon,Male,244
+Yunmi,Female,244
+Byeongho,Male,243
+Jewoo,Male,243
+Seungchul,Male,243
+Youngki,Male,243
+Dongwon,Male,242
+Hyun Soo,Male,242
+Hyunsu,Male,242
+Jongsoo,Male,241
+Sanghwa,Male,241
+Young Ju,Female,241
+Mijin,Female,240
+Chang Young,Male,239
+Eunmi,Female,238
+Jeongmi,Female,238
+Jihong,Male,238
+Juhee,Female,238
+Minhee,Female,238
+Myung,Female,238
+Sookyoung,Female,238
+Sungnam,Male,238
+Taejin,Male,238
+Woon,Male,238
+Eunhye,Female,237
+Heekyung,Female,237
+Hosung,Male,237
+Hwan,Male,237
+Jaekyun,Male,237
+Jongkyu,Male,237
+Jung Hyun,Male,237
+Junwon,Male,237
+Min Ho,Male,237
+Minkyu,Male,237
+Miseon,Female,237
+Namhee,Female,237
+Woo Seok,Male,237
+Sang Hee,Female,236
+Sang-Hoon,Male,236
+Jae Won,Male,235
+Jangho,Male,235
+Sung Eun,Female,235
+Taesoo,Male,235
+Yoonhee,Female,235
+Jaehun,Male,234
+Jisook,Female,234
+Kwang Hyun,Male,234
+Hyungtae,Male,233
+Jun Yong,Male,233
+Munsu,Male,233
+Sewon,Female,233
+Youngtae,Male,233
+Byungho,Male,232
+Yongsun,Female,232
+Hwayoung,Female,231
+Hyunchul,Male,231
+Jong Soo,Male,231
+Jong Tae,Male,231
+Yongju,Male,231
+Jong Wook,Male,230
+Junseok,Male,230
+Sejong,Male,230
+Wonhee,Female,230
+Jaejin,Male,229
+Jong Hwa,Male,229
+Kisung,Male,229
+Mihwa,Female,229
+Myung Jin,Female,229
+Sungjun,Male,229
+Young June,Male,229
+Younghun,Male,229
+Donguk,Male,228
+Ho Jin,Male,228
+Hyun Chul,Male,228
+Jiyoon,Female,228
+Kyungjin,Female,228
+So Yeon,Female,228
+Hyun Tae,Male,227
+Changhyun,Male,226
+Juwon,Male,226
+Seung Young,Male,226
+Tae Yong,Male,226
+Jungbae,Male,225
+Kangil,Male,225
+Myunghoon,Male,225
+Won Young,Female,225
+Youngja,Female,225
+Byungsoo,Male,224
+Hoil,Male,224
+Jong Ok,Male,224
+Sangbok,Male,224
+Jongsung,Male,223
+Ju-Young,Male,223
+Kwangsoo,Male,223
+Seong Hwan,Male,223
+Chan Young,Male,222
+Chang Hwan,Male,222
+Kihwan,Male,222
+Miae,Female,222
+Suhwan,Male,222
+Byungwoo,Male,221
+Chang Hee,Male,221
+Kyung Jin,Female,221
+Sang Won,Male,221
+Sungki,Male,221
+Jong Min,Male,220
+Jun Hee,Male,220
+Min Young,Female,220
+Youngsil,Female,220
+Chang Woo,Male,219
+Hyungjun,Male,219
+Jong Sung,Male,219
+Junghwa,Female,219
+Mijeong,Female,219
+Sung Soo,Male,219
+Dongsu,Male,218
+Heesung,Male,218
+Jeonghwan,Male,218
+Jungil,Male,218
+Sang Hak,Male,218
+Seung Woo,Male,218
+Sungjae,Male,218
+Suyoung,Female,218
+Taesik,Male,218
+Jaeyeon,Female,217
+Jisung,Male,217
+Kyounghwan,Male,217
+Kyusik,Male,217
+Miyeon,Female,217
+Youngsook,Female,217
+Sangeun,Female,216
+Yong Woo,Male,216
+Jung Su,Male,215
+Ki Hyun,Male,215
+Ki Seok,Male,215
+Sangyun,Male,215
+Taewoo,Male,215
+Youngchan,Male,215
+Youngsuk,Female,215
+Jongin,Male,214
+Wonjae,Male,214
+Youngsub,Male,214

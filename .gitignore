@@ -1,0 +1,36 @@
+# Byte-compiled / caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Coverage / test artifacts
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+
+# Generated campaign output (CSV/JSON exports written with --output)
+/*.csv
+/*.json
+
+# Editor / OS cruft
+.idea/
+.vscode/
+*.swp
+.DS_Store

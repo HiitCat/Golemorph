@@ -1,0 +1,951 @@
+# Locale metadata: one entry per origin. All locale-specific rules live here
+# as data so the generator stays locale-agnostic. Name datasets are normalized
+# CSVs generated from the names-dataset package (see scripts/generate_name_data.py)
+# the source column documents provenance.
+version: 3
+
+origins:
+  FRA:
+    label: French
+    language: fr
+    nationality: French
+    name_order: given-first
+    iso2: FR
+    dial_code: "+33"
+    phone_format: "{d} {p} {g1} {g2} {g3} {g4}"
+    subscriber_digits: 8
+    mobile_prefixes: ["6", "7"]
+    email_domains: [gmail.com, outlook.com, orange.fr, free.fr, live.fr, yahoo.fr]
+    cities: [Paris, Lyon, Marseille, Toulouse, Bordeaux, Lille, Nantes, Strasbourg, Nice, Montpellier, Rennes, Saint-Étienne, Toulon, Grenoble, Dijon, Angers]
+    roles: [Manager, Engineer, Accountant, Teacher, Technician, Civil servant, Nurse, Sales representative]
+    datasets:
+      first_names:
+        file: FRA/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - FR top-500 given-name ranks
+      surnames:
+        file: FRA/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - FR top-500 surname ranks
+
+  RUS:
+    label: Russian
+    language: ru
+    nationality: Russian
+    name_order: given-first
+    # Surnames decline by gender: Ivanov -> Ivanova for female bearers.
+    gendered_surnames: true
+    iso2: RU
+    dial_code: "+7"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 9
+    mobile_prefixes: ["900", "901", "902", "903", "905", "908", "909", "910", "915", "916", "925", "926", "927", "928", "951", "963", "964", "977", "985", "986"]
+    email_domains: [gmail.com, mail.ru, yandex.ru, rambler.ru, bk.ru, list.ru]
+    cities: [Moscow, Saint Petersburg, Novosibirsk, Yekaterinburg, Kazan, Nizhny Novgorod, Chelyabinsk, Samara, Omsk, Rostov-on-Don, Ufa, Krasnoyarsk, Voronezh, Perm, Volgograd, Krasnodar]
+    roles: [Engineer, Accountant, Teacher, Manager, IT specialist, Driver, Sales specialist, Nurse]
+    datasets:
+      first_names:
+        file: RUS/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - RU top-500 given-name ranks
+      surnames:
+        file: RUS/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - RU top-500 surname ranks
+
+  CHN:
+    label: Chinese
+    language: zh
+    nationality: Chinese
+    name_order: family-first
+    iso2: CN
+    dial_code: "+86"
+    phone_format: "{d}{p}{g1}{g2}{g3}"
+    subscriber_digits: 8
+    mobile_prefixes: ["130", "131", "132", "133", "135", "136", "137", "138", "139", "150", "151", "152", "155", "156", "157", "158", "159", "166", "170", "171", "172", "173", "175", "176", "177", "178", "180", "181", "182", "183", "184", "185", "186", "187", "188", "189", "191", "193", "195", "196", "197", "198", "199"]
+    email_domains: [qq.com, 163.com, 126.com, gmail.com, sina.com, foxmail.com, 139.com]
+    cities: [Beijing, Shanghai, Guangzhou, Shenzhen, Chengdu, Wuhan, Chongqing, Hangzhou, Nanjing, Suzhou, Tianjin, Xi'an, Zhengzhou, Changsha, Qingdao, Dalian]
+    roles: [Engineer, Accountant, Teacher, Manager, Factory worker, Courier, Sales representative, Civil servant]
+    datasets:
+      first_names:
+        file: CHN/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - CN top-500 given-name ranks
+      surnames:
+        file: CHN/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - CN top-500 surname ranks
+
+  ALG:
+    label: Algerian
+    language: ar
+    nationality: Algerian
+    name_order: given-first
+    iso2: DZ
+    dial_code: "+213"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 7
+    mobile_prefixes: ["540", "541", "542", "543", "544", "545", "546", "547", "548", "549", "550", "551", "552", "553", "554", "555", "556", "557", "558", "559", "660", "661", "662", "663", "664", "665", "666", "667", "668", "669", "770", "771", "772", "773", "774", "775", "776", "777", "778", "779"]
+    email_domains: [gmail.com, outlook.com, yahoo.fr, facebook.com, dznet.dz]
+    cities: [Algiers, Oran, Constantine, Annaba, Setif, Blida, Batna, Sidi Bel Abbes, Tlemcen, Skikda, Djelfa, Mostaganem, Bejaia, Tizi Ouzou, Ghardaia, Tiaret]
+    roles: [Civil servant, Teacher, Engineer, Trader, Nurse, Driver, Accountant, Sales representative]
+    datasets:
+      first_names:
+        file: ALG/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - DZ top-500 given-name ranks
+      surnames:
+        file: ALG/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - DZ top-500 surname ranks
+
+  MRN:
+    label: Moroccan
+    language: ar
+    nationality: Moroccan
+    name_order: given-first
+    iso2: MA
+    dial_code: "+212"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 7
+    mobile_prefixes: ["6", "7"]
+    email_domains: [gmail.com, outlook.com, menara.ma, inwi.net.ma, yahoo.fr, facebook.com]
+    cities: [Casablanca, Rabat, Marrakech, Fez, Tangier, Agadir, Meknes, Oujda, Mohammedia, Kenitra, Tetouan, Sale, Nador, Beni Mellal, Laayoune, Khenifra]
+    roles: [Trader, Teacher, Engineer, Farmer, Accountant, Artisan, Sales representative, Nurse]
+    datasets:
+      first_names:
+        file: MRN/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - MA top-500 given-name ranks
+      surnames:
+        file: MRN/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - MA top-500 surname ranks
+
+  DEU:
+    label: German
+    language: de
+    nationality: German
+    name_order: given-first
+    iso2: DE
+    dial_code: "+49"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 9
+    mobile_prefixes: ["151", "152", "157", "160", "162", "170", "171", "175", "176", "177"]
+    email_domains: [gmail.com, web.de, gmx.de, t-online.de, gmx.net, yahoo.de]
+    cities: [Berlin, Hamburg, Munich, Cologne, Frankfurt, Stuttgart, Düsseldorf, Dortmund, Essen, Leipzig, Bremen, Dresden, Hannover, Nuremberg, Duisburg, Bochum]
+    roles: [Engineer, Accountant, Teacher, Manager, Sales representative, Civil servant, Nurse, Technician]
+    datasets:
+      first_names:
+        file: DEU/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - DE top-500 given-name ranks
+      surnames:
+        file: DEU/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - DE top-500 surname ranks
+
+  ITA:
+    label: Italian
+    language: it
+    nationality: Italian
+    name_order: given-first
+    iso2: IT
+    dial_code: "+39"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 9
+    mobile_prefixes: ["320", "328", "329", "331", "332", "333", "334", "335", "338", "340"]
+    email_domains: [gmail.com, libero.it, virgilio.it, yahoo.it, tim.it, aruba.it]
+    cities: [Rome, Milan, Naples, Turin, Palermo, Florence, Bari, Bologna, Genoa, Catania, Venice, Verona, Messina, Padua, Trieste, Reggio Calabria]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Technician]
+    datasets:
+      first_names:
+        file: ITA/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - IT top-500 given-name ranks
+      surnames:
+        file: ITA/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - IT top-500 surname ranks
+
+  ESP:
+    label: Spanish
+    language: es
+    nationality: Spanish
+    name_order: given-first
+    iso2: ES
+    dial_code: "+34"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 8
+    mobile_prefixes: ["6", "7"]
+    email_domains: [gmail.com, yahoo.es, outlook.es, live.com, terra.es, hotmail.es]
+    cities: [Madrid, Barcelona, Valencia, Seville, Zaragoza, Málaga, Murcia, Palma, Bilbao, Alicante, Cordoba, Vitoria, Granada, Vigo, A Coruña, Castellón]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Waiter]
+    datasets:
+      first_names:
+        file: ESP/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - ES top-500 given-name ranks
+      surnames:
+        file: ESP/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - ES top-500 surname ranks
+
+  PRT:
+    label: Portuguese
+    language: pt
+    nationality: Portuguese
+    name_order: given-first
+    iso2: PT
+    dial_code: "+351"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 8
+    mobile_prefixes: ["91", "92", "93", "96"]
+    email_domains: [gmail.com, sapo.pt, outlook.pt, hotmail.pt, egipto.pt, rca.pt]
+    cities: [Lisbon, Porto, Coimbra, Braga, Aveiro, Setúbal, Faro, Évora, Leiria, Viana do Castelo, Funchal, Portimão, Caldas da Rainha, Vila Nova de Gaia, Sintra, Torres Vedras]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Technician]
+    datasets:
+      first_names:
+        file: PRT/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - PT top-500 given-name ranks
+      surnames:
+        file: PRT/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - PT top-500 surname ranks
+  GBR:
+    label: English
+    language: en
+    nationality: British
+    name_order: given-first
+    iso2: GB
+    dial_code: "+44"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 9
+    mobile_prefixes: ["74", "75", "77", "78", "79"]
+    email_domains: [gmail.com, hotmail.co.uk, outlook.com, btinternet.com, virginmedia.com, blueyonder.co.uk, sky.com]
+    cities: [London, Birmingham, Manchester, Leeds, Glasgow, Liverpool, Sheffield, Edinburgh, Bristol, Newcastle, Nottingham, Cardiff, Leicester, Southampton, Belfast, Brighton]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: GBR/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - GB top-500 given-name ranks
+      surnames:
+        file: GBR/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - GB top-500 surname ranks
+
+  IRL:
+    label: Irish
+    language: en
+    nationality: Irish
+    name_order: given-first
+    iso2: IE
+    dial_code: "+353"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 8
+    mobile_prefixes: ["83", "84", "85", "86", "87", "88"]
+    email_domains: [gmail.com, hotmail.com, outlook.ie, eircom.net, virginmedia.ie]
+    cities: [Dublin, Cork, Limerick, Galway, Waterford, Derry, Drogheda, Swords, Sligo, Kilkenny, Naas, Ennis, Athlone, Bray, Dun Laoghaire, Navan]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: IRL/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - IE top-500 given-name ranks
+      surnames:
+        file: IRL/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - IE top-500 surname ranks
+
+  BEL:
+    label: Belgian
+    language: nl-fr
+    nationality: Belgian
+    name_order: given-first
+    iso2: BE
+    dial_code: "+32"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 8
+    mobile_prefixes: ["45", "46", "47", "48", "49"]
+    email_domains: [gmail.com, hotmail.be, outlook.be, skynet.be, proximus.be]
+    cities: [Brussels, Antwerp, Gent, Liège, Bruges, Charleroi, Namur, Mechelen, Anderlecht, Kortrijk, Ostend, La Louvière, Hasselt, Wavre, Eupen, Tongeren]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: BEL/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - BE top-500 given-name ranks
+      surnames:
+        file: BEL/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - BE top-500 surname ranks
+
+  NLD:
+    label: Dutch
+    language: nl
+    nationality: Dutch
+    name_order: given-first
+    iso2: NL
+    dial_code: "+31"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 8
+    mobile_prefixes: ["6"]
+    email_domains: [gmail.com, hotmail.nl, outlook.nl, hetsnet.nl, kpnmail.nl, planetsprint.nl]
+    cities: [Amsterdam, Rotterdam, The Hague, Utrecht, Eindhoven, Groningen, Tilburg, Almere, Breda, Nijmegen, Enschede, Arnhem, Zwolle, Haarlem, Amersfoort, Maastricht]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: NLD/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - NL top-500 given-name ranks
+      surnames:
+        file: NLD/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - NL top-500 surname ranks
+
+  SUI:
+    label: Swiss
+    language: de-fr-it
+    nationality: Swiss
+    name_order: given-first
+    iso2: CH
+    dial_code: "+41"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 8
+    mobile_prefixes: ["78", "79"]
+    email_domains: [gmail.com, bluewin.ch, sunpost.ch, hotmail.ch, swisscom.ch]
+    cities: [Zurich, Geneva, Basel, Lausanne, Bern, Lucerne, St. Gallen, Winterthur, Thun, Lugano, Bellinzona, Aarau, Kloten, Chur, Sion, Locarno]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Technician]
+    datasets:
+      first_names:
+        file: SUI/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - CH top-500 given-name ranks
+      surnames:
+        file: SUI/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - CH top-500 surname ranks
+
+  AUT:
+    label: Austrian
+    language: de
+    nationality: Austrian
+    name_order: given-first
+    iso2: AT
+    dial_code: "+43"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 9
+    mobile_prefixes: ["660", "664", "666", "675", "676", "688", "699"]
+    email_domains: [gmail.com, gmx.at, aon.at, web2000.at, gmx.net]
+    cities: [Vienna, Graz, Linz, Salzburg, Innsbruck, Klagenfurt, Wels, St. Pölten, Dornbirn, Amstetten, Villach, Leoben, Wiener Neustadt, Feldkirch, Braunau, Eisenstadt]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Technician]
+    datasets:
+      first_names:
+        file: AUT/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - AT top-500 given-name ranks
+      surnames:
+        file: AUT/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - AT top-500 surname ranks
+  POL:
+    label: Polish
+    language: pl
+    nationality: Polish
+    name_order: given-first
+    iso2: PL
+    dial_code: "+48"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 8
+    mobile_prefixes: ["50", "51", "53", "57", "60", "66", "69", "72", "73", "78", "79"]
+    email_domains: [gmail.com, onet.pl, wp.pl, o2.pl, interia.pl, tlen.pl]
+    cities: [Warsaw, Kraków, Łódź, Wrocław, Poznań, Gdańsk, Szczecin, Bydgoszcz, Lublin, Białystok, Katowice, Gdynia, Częstochowa, Radom, Toruń, Rzeszów]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: POL/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - PL top-500 given-name ranks
+      surnames:
+        file: POL/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - PL top-500 surname ranks
+
+  CZE:
+    label: Czech
+    language: cs
+    nationality: Czech
+    name_order: given-first
+    iso2: CZ
+    dial_code: "+420"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 9
+    mobile_prefixes: ["601", "602", "603", "604", "605", "608", "723", "724", "728", "731", "735", "736", "737", "773", "774", "775", "776", "777", "778", "779"]
+    email_domains: [gmail.com, seznam.cz, centrum.cz, email.cz, tiscali.cz]
+    cities: [Prague, Brno, Ostrava, Plzeň, Liberec, Olomouc, Hradec Králové, České Budějovice, Pardubice, Zlín, Ústí nad Labem, Karlovy Vary, Jablonec nad Nisou, Teplice, Most, České Velenice]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: CZE/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - CZ top-500 given-name ranks
+      surnames:
+        file: CZE/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - CZ top-500 surname ranks
+
+  HUN:
+    label: Hungarian
+    language: hu
+    nationality: Hungarian
+    name_order: given-first
+    iso2: HU
+    dial_code: "+36"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 8
+    mobile_prefixes: ["20", "30", "31", "70"]
+    email_domains: [gmail.com, yahoo.hu, freemail.hu, vnn.hu, atv.hu]
+    cities: [Budapest, Debrecen, Szeged, Miskolc, Pécs, Győr, Nyíregyháza, Kecskemét, Székesfehérvár, Szombathely, Eger, Tatabánya, Dunaújváros, Zalaegerszeg, Szolnok, Kazincbarcika]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: HUN/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - HU top-500 given-name ranks
+      surnames:
+        file: HUN/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - HU top-500 surname ranks
+
+  GRC:
+    label: Greek
+    language: el
+    nationality: Greek
+    name_order: given-first
+    iso2: GR
+    dial_code: "+30"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 8
+    mobile_prefixes: ["69"]
+    email_domains: [gmail.com, mail.gr, yahoo.gr, hotmail.gr, live.gr]
+    cities: [Athens, Thessaloniki, Patras, Heraklion, Larissa, Volos, Rhodes, Chania, Ioannina, Agrinio, Sparta, Kozani, Serres, Kavala, Xanthi, Lamia]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: GRC/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - GR top-500 given-name ranks
+      surnames:
+        file: GRC/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - GR top-500 surname ranks
+
+  BGR:
+    label: Bulgarian
+    language: bg
+    nationality: Bulgarian
+    name_order: given-first
+    iso2: BG
+    dial_code: "+359"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 8
+    mobile_prefixes: ["87", "88", "98", "99"]
+    email_domains: [gmail.com, abv.bg, hotmail.bg, live.bg, bulmail.bg]
+    cities: [Sofia, Plovdiv, Varna, Burgas, Ruse, Stara Zagora, Pleven, Sliven, Dobrich, Shumen, Haskovo, Pernik, Vidin, Yambol, Blagoevgrad, Asenovgrad]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: BGR/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - BG top-500 given-name ranks
+      surnames:
+        file: BGR/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - BG top-500 surname ranks
+
+  HRV:
+    label: Croatian
+    language: hr
+    nationality: Croatian
+    name_order: given-first
+    iso2: HR
+    dial_code: "+385"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 8
+    mobile_prefixes: ["91", "92", "95", "97", "98", "99"]
+    email_domains: [gmail.com, aon.hr, t-com.hr, vip.hr, hotmail.hr]
+    cities: [Zagreb, Split, Rijeka, Osijek, Zadar, Varaždin, Šibenik, Pula, Slavonski Brod, Karlovac, Dubrovnik, Sisak, Velika Gorica, Vinkovci, Bjelovar, Koprivnica]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: HRV/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - HR top-500 given-name ranks
+      surnames:
+        file: HRV/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - HR top-500 surname ranks
+  SVN:
+    label: Slovenian
+    language: sl
+    nationality: Slovenian
+    name_order: given-first
+    iso2: SI
+    dial_code: "+386"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 7
+    mobile_prefixes: ["31", "34"]
+    email_domains: [gmail.com, siol.net, t-2.si, mariborsko.si, gmx.si]
+    cities: [Ljubljana, Maribor, Celje, Koper, Kranj, Velenje, Novo Mesto, Ptuj, Kamnik, Murska Sobota, Trbovlje, Jesenice, Kranjska Gora, Škofja Loka, Domžale, Izola]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: SVN/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - SI top-500 given-name ranks
+      surnames:
+        file: SVN/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - SI top-500 surname ranks
+
+  DNK:
+    label: Danish
+    language: da
+    nationality: Danish
+    name_order: given-first
+    iso2: DK
+    dial_code: "+45"
+    phone_format: "{d} {p} {g1} {g2} {g3} {g4}"
+    subscriber_digits: 8
+    mobile_prefixes: ["20", "21", "22", "23", "24", "26", "28", "29", "30", "40", "50", "60", "70"]
+    email_domains: [gmail.com, hotmail.dk, telia.dk, live.dk, yahoo.dk]
+    cities: [Copenhagen, Aarhus, Odense, Aalborg, Esbjerg, Randers, Kolding, Viborg, Fredericia, Horsens, Næstved, Slagelse, Hjørring, Thisted, Værløse, Søborg]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: DNK/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - DK top-500 given-name ranks
+      surnames:
+        file: DNK/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - DK top-500 surname ranks
+
+  NOR:
+    label: Norwegian
+    language: "no"
+    nationality: Norwegian
+    name_order: given-first
+    iso2: "NO"
+    dial_code: "+47"
+    phone_format: "{d} {p} {g1} {g2} {g3} {g4}"
+    subscriber_digits: 8
+    mobile_prefixes: ["40", "41", "42", "45", "46", "47", "48", "55", "90", "91", "92", "93", "95", "99"]
+    email_domains: [gmail.com, hotmail.no, telia.no, live.no, yahoo.no]
+    cities: [Oslo, Bergen, Trondheim, Stavanger, Kristiansand, Drammen, Fredrikstad, Lillehammer, Tromsø, Ålesund, Haugesund, Porsgrunn, Molde, Sandnes, Tønsberg, Arendal]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: NOR/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - NO top-500 given-name ranks
+      surnames:
+        file: NOR/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - NO top-500 surname ranks
+
+  SWE:
+    label: Swedish
+    language: sv
+    nationality: Swedish
+    name_order: given-first
+    iso2: SE
+    dial_code: "+46"
+    phone_format: "{d} {p} {g1} {g2} {g3} {g4}"
+    subscriber_digits: 8
+    mobile_prefixes: ["70", "72", "73", "74", "75", "76", "79"]
+    email_domains: [gmail.com, hotmail.se, telia.se, live.se, yahoo.se]
+    cities: [Stockholm, Gothenburg, Malmö, Uppsala, Västerås, Örebro, Helsingborg, Gävle, Umeå, Linköping, Borås, Jönköping, Sundsvall, Karlstad, Luleå, Halmstad]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: SWE/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - SE top-500 given-name ranks
+      surnames:
+        file: SWE/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - SE top-500 surname ranks
+
+  FIN:
+    label: Finnish
+    language: fi
+    nationality: Finnish
+    name_order: given-first
+    iso2: FI
+    dial_code: "+358"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 8
+    mobile_prefixes: ["40", "41", "44", "45", "46", "47", "50"]
+    email_domains: [gmail.com, hotmail.fi, telia.fi, live.fi, yahoo.fi]
+    cities: [Helsinki, Espoo, Tampere, Vantaa, Oulu, Turku, Jyväskylä, Lahti, Kuopio, Pori, Rovaniemi, Lappeenranta, Vaasa, Joensuu, Kotka, Hämeenlinna]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: FIN/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - FI top-500 given-name ranks
+      surnames:
+        file: FIN/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - FI top-500 surname ranks
+
+  TUR:
+    label: Turkish
+    language: tr
+    nationality: Turkish
+    name_order: given-first
+    iso2: TR
+    dial_code: "+90"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 8
+    mobile_prefixes: ["501", "502", "503", "504", "505", "506", "507", "530", "531", "532", "533", "534", "535", "536", "537", "538", "539", "540", "541", "542", "550", "551", "552", "553", "554", "555", "556", "557", "558", "559", "561", "562", "563", "564", "565", "566", "567", "568", "569", "581", "582", "583", "584", "585", "586", "587", "588", "589", "590", "591", "592", "593", "594", "595", "596", "597", "598", "599"]
+    email_domains: [gmail.com, outlook.com, hotmail.com, yahoo.com, mavi.com.tr, superonline.com, tt.net]
+    cities: [Istanbul, Ankara, Izmir, Bursa, Antalya, Adana, Konya, Gaziantep, Kayseri, Mersin, Kocaeli, Denizli, Sanliurfa, Eskişehir, Diyarbakır, Trabzon]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: TUR/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - TR top-500 given-name ranks
+      surnames:
+        file: TUR/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - TR top-500 surname ranks
+  TUN:
+    label: Tunisian
+    language: ar
+    nationality: Tunisian
+    name_order: given-first
+    iso2: TN
+    dial_code: "+216"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 7
+    mobile_prefixes: ["20", "21", "22", "55", "56", "58", "98", "99"]
+    email_domains: [gmail.com, outlook.com, yahoo.fr, tunet.com.tn, rti.com.tn]
+    cities: [Tunis, Sfax, Sousse, Ariana, Kairouan, Béja, Gabès, Nabeul, Bizerte, Gafsa, Jendouba, Kasserine, Le Kef, Mahdia, Medenine, Monastir]
+    roles: [Civil servant, Teacher, Engineer, Trader, Nurse, Driver, Accountant, Sales representative]
+    datasets:
+      first_names:
+        file: TUN/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - TN top-500 given-name ranks
+      surnames:
+        file: TUN/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - TN top-500 surname ranks
+
+  EGY:
+    label: Egyptian
+    language: ar
+    nationality: Egyptian
+    name_order: given-first
+    iso2: EG
+    dial_code: "+20"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 8
+    mobile_prefixes: ["100", "101", "106", "109", "110", "111", "115", "127", "128", "191", "199"]
+    email_domains: [gmail.com, outlook.com, hotmail.com, teta.eg, link.eg]
+    cities: [Cairo, Giza, Alexandria, Shubra El Kheima, Mansoura, Aswan, Luxor, Tanta, Zagazig, Port Said, Asyut, Hurghada, Damietta, Minya, Fayoum, Sohag]
+    roles: [Civil servant, Teacher, Engineer, Trader, Nurse, Driver, Accountant, Sales representative]
+    datasets:
+      first_names:
+        file: EGY/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - EG top-500 given-name ranks
+      surnames:
+        file: EGY/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - EG top-500 surname ranks
+
+  SAU:
+    label: Saudi
+    language: ar
+    nationality: Saudi
+    name_order: given-first
+    iso2: SA
+    dial_code: "+966"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 8
+    mobile_prefixes: ["50", "51", "52", "53", "54", "55", "56", "57", "58", "59"]
+    email_domains: [gmail.com, outlook.com, stc.com.sa, sabb.com.sa, yahoo.com]
+    cities: [Riyadh, Jeddah, Mecca, Medina, Dammam, Khobar, Taif, Buraidah, Tabuk, Abha, Hail, Jubail, Yanbu, Qatif, Al Kharj, Najran]
+    roles: [Engineer, Civil servant, Accountant, Teacher, Trader, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: SAU/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - SA top-500 given-name ranks
+      surnames:
+        file: SAU/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - SA top-500 surname ranks
+
+  USA:
+    label: American
+    language: en
+    nationality: American
+    name_order: given-first
+    iso2: US
+    dial_code: "+1"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 7
+    mobile_prefixes: ["201", "202", "203", "206", "209", "212", "213", "303", "305", "310", "312", "323", "404", "407", "408", "415", "425", "469", "504", "508", "510", "512", "513", "516", "518", "602", "614", "615", "616", "617", "619", "628", "646", "647", "650", "702", "713", "714", "718", "720", "727", "732", "754", "770", "772", "773", "775", "781", "786", "801"]
+    email_domains: [gmail.com, yahoo.com, outlook.com, hotmail.com, aol.com, icloud.com, proton.me]
+    cities: [New York, Los Angeles, Chicago, Houston, Phoenix, Philadelphia, San Antonio, San Diego, Dallas, Austin, Jacksonville, San Jose, Columbus, Indianapolis, Fort Worth, Charlotte]
+    roles: [Engineer, Accountant, Teacher, Manager, Nurse, Sales representative, Real estate agent, Driver]
+    datasets:
+      first_names:
+        file: USA/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - US top-500 given-name ranks
+      surnames:
+        file: USA/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - US top-500 surname ranks
+
+  CAN:
+    label: Canadian
+    language: en
+    nationality: Canadian
+    name_order: given-first
+    iso2: CA
+    dial_code: "+1"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 7
+    mobile_prefixes: ["204", "226", "236", "249", "250", "289", "306", "343", "365", "387", "388", "403", "416", "431", "437", "438", "450", "467", "468", "474", "514", "519", "548", "579", "581", "587", "604", "613", "639", "647", "672", "705", "709", "742", "778", "780", "782", "807", "819", "825", "867", "873", "902", "905"]
+    email_domains: [gmail.com, hotmail.com, outlook.com, rogers.com, sympatico.ca, videotron.ca]
+    cities: [Toronto, Montreal, Vancouver, Calgary, Edmonton, Ottawa, Winnipeg, Quebec City, Halifax, Mississauga, Brampton, London, Markham, Laval, Surrey, Saskatoon]
+    roles: [Engineer, Accountant, Teacher, Manager, Nurse, Sales representative, Civil servant, Driver]
+    datasets:
+      first_names:
+        file: CAN/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - CA top-500 given-name ranks
+      surnames:
+        file: CAN/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - CA top-500 surname ranks
+  BRA:
+    label: Brazilian
+    language: pt
+    nationality: Brazilian
+    name_order: given-first
+    iso2: BR
+    dial_code: "+55"
+    # Brazilian mobiles carry a fixed "9" after the area code, before the
+    # subscriber number, so it is baked into the format template.
+    phone_format: "{d} {p}9 {g1} {g2} {g3} {g4}"
+    subscriber_digits: 8
+    mobile_prefixes: ["11", "16", "17", "18", "19", "21", "22", "24", "27", "28", "31", "32", "33", "34", "35", "37", "38", "41", "42", "43", "44", "45", "46", "47", "48", "49", "51", "53", "54", "55", "61", "62", "63", "64", "65", "66", "67", "68", "69", "71", "73", "74", "75", "77", "79", "81", "82", "83", "84", "85", "86", "87", "88", "89", "91", "92", "93", "94", "95", "96", "97", "98", "99"]
+    email_domains: [gmail.com, outlook.com, uol.com.br, terra.com.br, bol.com.br, ig.com.br, hotmail.com]
+    cities: [São Paulo, Rio de Janeiro, Brasília, Salvador, Fortaleza, Belo Horizonte, Curitiba, Recife, Porto Alegre, Manaus, Goiânia, Belém, Natal, Campo Grande, Florianópolis, São Luís]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: BRA/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - BR top-500 given-name ranks
+      surnames:
+        file: BRA/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - BR top-500 surname ranks
+
+  MEX:
+    label: Mexican
+    language: es
+    nationality: Mexican
+    name_order: given-first
+    iso2: MX
+    dial_code: "+52"
+    # All Mexican numbers take a trunk prefix "1" after the country code and
+    # use 2-group spacing, so both are baked into the template.
+    phone_format: "{d} 1{p} {g1} {g2}"
+    subscriber_digits: 8
+    mobile_prefixes: ["55", "33", "81", "89", "22", "222", "229", "271", "287", "331", "332", "333", "341", "342", "343", "344", "346", "347", "348", "349", "351", "352", "353", "354", "356", "357", "358", "359", "361", "362", "363", "365", "367", "368", "369", "371", "372", "373", "374", "376"]
+    email_domains: [gmail.com, hotmail.com, outlook.com, live.com, prodigy.net.mx, yahoo.com.mx]
+    cities: [Mexico City, Guadalajara, Monterrey, Puebla, Tijuana, Querétaro, León, Mérida, Cancún, Toluca, Hermosillo, Chihuahua, Culiacán, Morelia, Aguascalientes, Torreón]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: MEX/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - MX top-500 given-name ranks
+      surnames:
+        file: MEX/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - MX top-500 surname ranks
+
+  COL:
+    label: Colombian
+    language: es
+    nationality: Colombian
+    name_order: given-first
+    iso2: CO
+    dial_code: "+57"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 9
+    mobile_prefixes: ["3"]
+    email_domains: [gmail.com, hotmail.com, outlook.com, etb.net.co, unal.edu.co]
+    cities: [Bogotá, Medellín, Cali, Barranquilla, Cartagena, Cúcuta, Bucaramanga, Pereira, Santa Marta, Ibagué, Manizales, Villavicencio, Neiva, Armenia, Pasto, Sincelejo]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: COL/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - CO top-500 given-name ranks
+      surnames:
+        file: COL/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - CO top-500 surname ranks
+
+  ARG:
+    label: Argentine
+    language: es
+    nationality: Argentine
+    name_order: given-first
+    iso2: AR
+    dial_code: "+54"
+    # Argentine mobiles carry a fixed "9" after the country code.
+    phone_format: "{d} 9{p} {g1} {g2}"
+    subscriber_digits: 8
+    mobile_prefixes: ["11", "351", "381", "341", "342", "343", "344", "345", "352", "353", "354", "356", "357", "358", "359", "361", "362", "221", "223", "225", "226", "227", "228", "229", "231", "232", "233", "236", "237", "247", "249", "251", "252", "254", "255", "256", "257", "258", "259", "261", "263", "264", "265", "266", "268", "269", "280", "281", "291", "296", "297", "298", "299"]
+    email_domains: [gmail.com, hotmail.com, outlook.com, arnet.com.ar, fibertel.com, yahoo.com.ar]
+    cities: [Buenos Aires, Córdoba, Rosario, Mendoza, San Miguel de Tucumán, Mar del Plata, La Plata, Salta, San Juan, Neuquén, Río Cuarto, Bahía Blanca, Posadas, Olavarría, Corrientes, Concepción del Uruguay]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: ARG/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - AR top-500 given-name ranks
+      surnames:
+        file: ARG/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - AR top-500 surname ranks
+
+  JPN:
+    label: Japanese
+    language: ja
+    nationality: Japanese
+    name_order: family-first
+    iso2: JP
+    dial_code: "+81"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 9
+    mobile_prefixes: ["70", "80", "90"]
+    email_domains: [gmail.com, yahoo.co.jp, docomo.ne.jp, i.softbank.jp, ezweb.ne.jp, au.com]
+    cities: [Tokyo, Yokohama, Osaka, Nagoya, Sapporo, Fukuoka, Kobe, Kyoto, Sendai, Hiroshima, Chiba, Kawasaki, Kumamoto, Sakai, Gifu, Himeji]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Factory worker]
+    datasets:
+      first_names:
+        file: JPN/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - JP top-500 given-name ranks
+      surnames:
+        file: JPN/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - JP top-500 surname ranks
+  KOR:
+    label: Korean
+    language: ko
+    nationality: Korean
+    name_order: family-first
+    iso2: KR
+    dial_code: "+82"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 8
+    mobile_prefixes: ["10"]
+    email_domains: [gmail.com, naver.com, daum.net, hanmail.net, kakao.com]
+    cities: [Seoul, Busan, Incheon, Daegu, Daejeon, Gwangju, Ulsan, Suwon, Goyang, Ansan, Changwon, Seongnam, Pohang, Cheonan, Jeonju, Jeju]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Factory worker]
+    datasets:
+      first_names:
+        file: KOR/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - KR top-500 given-name ranks
+      surnames:
+        file: KOR/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - KR top-500 surname ranks
+
+  IND:
+    label: Indian
+    language: hi
+    nationality: Indian
+    name_order: given-first
+    iso2: IN
+    dial_code: "+91"
+    phone_format: "{d} {p} {g1} {g2}"
+    subscriber_digits: 9
+    mobile_prefixes: ["6", "7", "8", "9"]
+    email_domains: [gmail.com, yahoo.com, outlook.com, hotmail.com, rediffmail.com, sify.com, vsnl.com]
+    cities: [Mumbai, Delhi, Bengaluru, Hyderabad, Chennai, Kolkata, Ahmedabad, Pune, Jaipur, Surat, Lucknow, Kanpur, Nagpur, Indore, Bhopal, Ludhiana]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Trader]
+    datasets:
+      first_names:
+        file: IND/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - IN top-500 given-name ranks
+      surnames:
+        file: IND/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - IN top-500 surname ranks
+
+  IDN:
+    label: Indonesian
+    language: id
+    nationality: Indonesian
+    name_order: given-first
+    iso2: ID
+    dial_code: "+62"
+    phone_format: "{d} {p} {g1} {g2}"
+    subscriber_digits: 8
+    mobile_prefixes: ["81"]
+    email_domains: [gmail.com, yahoo.co.id, outlook.com, telkom.net, rocket.co.id]
+    cities: [Jakarta, Surabaya, Bandung, Medan, Palembang, Makassar, Bekasi, Batam, Tangerang, Semarang, Depok, Cirebon, Surakarta, Pekanbaru, Pontianak, Jayapura]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: IDN/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - ID top-500 given-name ranks
+      surnames:
+        file: IDN/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - ID top-500 surname ranks
+
+  PHL:
+    label: Filipino
+    language: tl
+    nationality: Filipino
+    name_order: given-first
+    iso2: PH
+    dial_code: "+63"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 9
+    mobile_prefixes: ["905", "906", "915", "916", "917", "918", "920", "930", "939", "945", "950", "951", "955", "956", "966", "967", "968", "970", "977", "978", "989", "995", "996", "999"]
+    email_domains: [gmail.com, yahoo.com, outlook.com, hotmail.com, filgar.com, magcom.net]
+    cities: [Manila, Quezon City, Davao, Cebu, Caloocan, Antipolo, Muntinlupa, Taguig, Parañaque, Batangas, Las Piñas, Makati, Pasig, Marikina, Baguio, Iloilo]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: PHL/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - PH top-500 given-name ranks
+      surnames:
+        file: PHL/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - PH top-500 surname ranks
+
+  MYS:
+    label: Malaysian
+    language: ms
+    nationality: Malaysian
+    name_order: given-first
+    iso2: MY
+    dial_code: "+60"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 9
+    mobile_prefixes: ["11", "12", "13", "14", "15", "16", "17", "18", "19"]
+    email_domains: [gmail.com, yahoo.com.my, outlook.com, hotmail.com, tm.com.my, duit.com.my]
+    cities: [Kuala Lumpur, Johor Bahru, Penang, Ipoh, Malacca, Putrajaya, Shah Alam, Kota Kinabalu, Kuching, Seremban, Alor Setar, Sandakan, Kota Bharu, Miri, Taiping, Bentong]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: MYS/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - MY top-500 given-name ranks
+      surnames:
+        file: MYS/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - MY top-500 surname ranks
+  SGP:
+    label: Singaporean
+    language: en
+    nationality: Singaporean
+    name_order: given-first
+    iso2: SG
+    dial_code: "+65"
+    phone_format: "{d} {p} {g1} {g2}"
+    subscriber_digits: 8
+    mobile_prefixes: ["81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98"]
+    email_domains: [gmail.com, yahoo.com, outlook.com, hotmail.com, starhub.com, singnet.com.sg]
+    cities: [Singapore, Jurong, Woodlands, Tampines, Bedok, Ang Mo Kio, Toa Payoh, Punggol, Sengkang, Yishun, Clementi, Hougang, Kallang, Serangoon, Sembawang, Queenstown]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Technician]
+    datasets:
+      first_names:
+        file: SGP/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - SG top-500 given-name ranks
+      surnames:
+        file: SGP/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - SG top-500 surname ranks
+
+  NGA:
+    label: Nigerian
+    language: en
+    nationality: Nigerian
+    name_order: given-first
+    iso2: NG
+    dial_code: "+234"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 10
+    mobile_prefixes: ["701", "702", "703", "704", "705", "706", "707", "708", "802", "803", "804", "805", "806", "807", "808", "809", "810", "811", "812", "813", "814", "815", "901", "902", "903", "904", "905", "906", "907", "908", "909", "911", "912", "913", "914", "915", "916"]
+    email_domains: [gmail.com, yahoo.com, outlook.com, hotmail.com, web.ng, idebiza.net]
+    cities: [Lagos, Abuja, Ibadan, Kano, Benin City, Port Harcourt, Kaduna, Jos, Enugu, Oyo, Onitsha, Owerri, Sokoto, Bauchi, Uyo, Abeokuta]
+    roles: [Trader, Engineer, Accountant, Teacher, Civil servant, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: NGA/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - NG top-500 given-name ranks
+      surnames:
+        file: NGA/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - NG top-500 surname ranks
+
+  ZAF:
+    label: South African
+    language: en
+    nationality: South African
+    name_order: given-first
+    iso2: ZA
+    dial_code: "+27"
+    phone_format: "{d} {p} {g1} {g2} {g3}"
+    subscriber_digits: 8
+    mobile_prefixes: ["60", "61", "63", "65", "66", "71", "72", "73", "74", "75", "76", "81", "82", "83", "84"]
+    email_domains: [gmail.com, yahoo.co.za, outlook.com, hotmail.com, virgin.co.za, mweb.co.za]
+    cities: [Johannesburg, Cape Town, Durban, Pretoria, Port Elizabeth, Bloemfontein, Pietermaritzburg, Polokwane, Nelspruit, East London, Kimberley, George, Rustenburg, Newcastle, Vanderbijlpark, Springs]
+    roles: [Engineer, Accountant, Teacher, Manager, Civil servant, Nurse, Sales representative, Driver]
+    datasets:
+      first_names:
+        file: ZAF/FirstName.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - ZA top-500 given-name ranks
+      surnames:
+        file: ZAF/Surname.csv
+        source: names-dataset 3.3.1 (Facebook, ~533M users) - ZA top-500 surname ranks

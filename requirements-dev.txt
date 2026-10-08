@@ -1,0 +1,3 @@
+-r requirements.txt
+pytest>=8.0
+names-dataset>=3.3.0
