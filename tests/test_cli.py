@@ -26,7 +26,7 @@ def test_defaults_are_usa_single_bare_name():
     assert args.seed is None
     assert args.format == "name"
     assert args.output is None
-    assert args.list_origins is False
+    assert args.list_origins is None  # flag absent; bare flag yields "all"
 
 
 def test_origin_accepts_long_and_short_flags():
@@ -62,7 +62,8 @@ def test_flags_plumb_seed_unique_count_and_output():
         "csv",
     )
     assert build_parser().parse_args(["--unweighted"]).unweighted is True
-    assert build_parser().parse_args(["--list-origins"]).list_origins is True
+    assert build_parser().parse_args(["--list-origins"]).list_origins == "all"
+    assert build_parser().parse_args(["--list-origins", "EUROPE"]).list_origins == "europe"
 
 
 def test_unique_takes_an_optional_part_and_rejects_others():
@@ -99,6 +100,42 @@ def test_list_origins_prints_every_locale_and_exits(capsys):
     assert len(codes) == 45
     fra = codes["FRA"]
     assert fra[0] == "French" and fra[2] == "fr" and fra[3] == "+33"
+
+
+def _origin_codes(out: str) -> set[str]:
+    """Pull the 3-letter codes (column 1) out of a rendered origins listing."""
+    found = set()
+    for line in out.splitlines():
+        if "│" not in line:
+            continue
+        cells = [c.strip() for c in line.strip().strip("│").split("│")]
+        code = cells[1] if len(cells) > 1 else ""
+        if len(code) == 3 and code.isalpha() and code.isupper():
+            found.add(code)
+    return found
+
+
+def test_list_origins_filters_by_group(capsys):
+    from golemorph.cli import main
+
+    main(["--list-origins", "asia"])
+    codes = _origin_codes(capsys.readouterr().out)
+    assert codes == {"CHN", "IDN", "IND", "JPN", "KOR", "MYS", "PHL", "SGP"}
+
+
+def test_list_origins_group_is_case_insensitive(capsys):
+    from golemorph.cli import main
+
+    main(["--list-origins", "AMERICAS"])
+    codes = _origin_codes(capsys.readouterr().out)
+    assert codes == {"ARG", "BRA", "CAN", "COL", "MEX", "USA"}
+
+
+def test_list_origins_rejects_unknown_group(capsys):
+    from golemorph.cli import main
+
+    with pytest.raises(SystemExit):
+        main(["--list-origins", "narnia"])
 
 
 def test_main_writes_bare_names_to_stdout(capsys):
