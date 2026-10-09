@@ -26,7 +26,7 @@ def test_defaults_are_usa_single_bare_name():
     assert args.seed is None
     assert args.format == "name"
     assert args.output is None
-    assert args.list_origins is None  # flag absent; bare flag yields "all"
+    assert args.list_origins is None  # None when the flag is not passed; bare flag yields "all"
 
 
 def test_origin_accepts_long_and_short_flags():

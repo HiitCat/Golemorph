@@ -106,10 +106,16 @@ class Persona:
         return " ".join(pair)
 
     def to_dict(self) -> dict:
-        """Full record for the `json`/`csv` export formats."""
+        """Full record for the `json`/`csv` export formats.
+
+        The dataset `*_source` provenance fields are dropped here: they are
+        constant for a given origin and only clutter an exported campaign.
+        """
         row = asdict(self)
         row["gender"] = self.gender.value if self.gender else ""
         row["full_name"] = self.full_name
+        row.pop("first_name_source", None)
+        row.pop("last_name_source", None)
         return row
 
     def to_gophish(self) -> dict:

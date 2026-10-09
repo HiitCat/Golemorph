@@ -53,18 +53,44 @@ def _format_phone(rng: random.Random, profile: OriginProfile) -> str:
     )
 
 
+def _email_base(rng: random.Random, given: str, family: str) -> str:
+    """Pick one plausible name-based local part layout for `given`/`family`
+    ASCII slugs, mirroring the handful of styles mail providers see in the
+    wild. Weighted so `first.last` / `firstlast` dominate, with initial-based
+    and reversed forms as the long tail.
+
+    Only called when at least one slug is non-empty; the separator is chosen
+    once so both halves agree.
+    """
+    sep = rng.choice(_EMAIL_SEPARATORS)
+    if given and family:
+        styles = (
+            (lambda: given + sep + family, 5),   # jean.dupont / jeandupont
+            (lambda: given[0] + family, 2),      # jdupont
+            (lambda: given[0] + sep + family, 2),  # j.dupont
+            (lambda: given + sep + family[0], 1),  # jean.d
+            (lambda: family + sep + given, 1),   # dupont.jean
+            (lambda: family + sep + given[0], 1),  # dupont.j
+        )
+        builders = [s for s, _ in styles]
+        weights = [w for _, w in styles]
+        return rng.choices(builders, weights=weights, k=1)[0]()
+    # Exactly one slug survived ASCII folding: use it as-is.
+    return given or family
+
+
 def _email_local(rng: random.Random, given: NameEntry, family: NameEntry,
                  birth_year: int) -> str:
-    """A plausible local part: name slug, sometimes with a numeric suffix.
+    """A plausible local part: a name-based layout, sometimes with a numeric
+    suffix.
 
-    The suffix mirrors real address-book habits (birth-year or random digits),
-    and mixing it keeps a batch of personas from colliding on one domain.
-    All-CJK names ASCII-fold to nothing, so fall back to `user` plus digits
-    rather than shipping an empty local part.
+    The layout varies (see :func:`_email_base`); the suffix mirrors real
+    address-book habits (birth-year or random digits), and mixing both keeps a
+    batch of personas from colliding on one domain. All-CJK names ASCII-fold to
+    nothing, so fall back to `user` plus digits rather than shipping an empty
+    local part.
     """
-    slug = rng.choice(_EMAIL_SEPARATORS).join(
-        part for part in (_ascii_slug(given.name), _ascii_slug(family.name)) if part
-    )
+    slug = _email_base(rng, _ascii_slug(given.name), _ascii_slug(family.name))
     if not slug:
         slug = f"user{rng.randint(10, 99)}"
 
