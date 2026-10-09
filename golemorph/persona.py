@@ -18,11 +18,30 @@ from .sampler import NameSampler
 
 _DEFAULT_MIN_AGE = 18
 _DEFAULT_MAX_AGE = 64
+# Keep the draw to the credible middle of the frequency curve. The most common
+# names read like "John Doe" placeholders; the rarest read as odd or
+# unplaceable. Names (and so personas) outside this percentile band are
+# excluded from the draw. Set min to 0.0 and max to 100.0 to disable the band
+# and restore the full distribution.
+_DEFAULT_MIN_PERCENTILE = 10.0
+_DEFAULT_MAX_PERCENTILE = 95.0
 _EMAIL_SEPARATORS = ("", ".", "_")
 _EMAIL_NUMBER_SUFFIXES = ("", "", "", "{yy}", "{dd}", "{yy}{dd}")
 # A --unique group is redrawn only to resolve a cross-gender full-name
 # collision, which is rare, so a few attempts suffice; the cap bounds the loop.
 _MAX_UNIQUE_ATTEMPTS = 100
+
+
+def _banded(entries: list[NameEntry], min_percentile: float,
+            max_percentile: float) -> list[NameEntry]:
+    """Entries whose percentile falls within `[min_percentile, max_percentile]`,
+    so both the most common ("John Doe") and the rarest names are kept out of
+    the draw. Never returns empty: if the band would remove everything (an
+    absurd range), the full pool is used instead."""
+    if min_percentile <= 0.0 and max_percentile >= 100.0:
+        return entries
+    pool = [e for e in entries if min_percentile <= e.percentile <= max_percentile]
+    return pool or entries
 
 
 def _ascii_slug(text: str) -> str:
@@ -65,11 +84,11 @@ def _email_base(rng: random.Random, given: str, family: str) -> str:
     sep = rng.choice(_EMAIL_SEPARATORS)
     if given and family:
         styles = (
-            (lambda: given + sep + family, 5),   # jean.dupont / jeandupont
-            (lambda: given[0] + family, 2),      # jdupont
+            (lambda: given + sep + family, 5),     # jean.dupont / jeandupont
+            (lambda: given[0] + family, 2),        # jdupont
             (lambda: given[0] + sep + family, 2),  # j.dupont
             (lambda: given + sep + family[0], 1),  # jean.d
-            (lambda: family + sep + given, 1),   # dupont.jean
+            (lambda: family + sep + given, 1),     # dupont.jean
             (lambda: family + sep + given[0], 1),  # dupont.j
         )
         builders = [s for s, _ in styles]
@@ -112,12 +131,18 @@ def _draw_unique(
     genders: list[Gender],
     weighted: bool,
     mode: str,
+    min_percentile: float,
+    max_percentile: float,
 ) -> list[tuple[NameEntry, NameEntry]]:
     """Draw one `(given, family)` pair per persona so that `mode` never repeats
     across the whole run (not merely within a gender)."""
     if mode == "full":
-        return _draw_unique_full(rng, profile, genders, weighted)
-    return _draw_unique_part(rng, profile, genders, weighted, mode)
+        return _draw_unique_full(
+            rng, profile, genders, weighted, min_percentile, max_percentile
+        )
+    return _draw_unique_part(
+        rng, profile, genders, weighted, mode, min_percentile, max_percentile
+    )
 
 
 def _draw_unique_part(
@@ -126,6 +151,8 @@ def _draw_unique_part(
     genders: list[Gender],
     weighted: bool,
     mode: str,
+    min_percentile: float,
+    max_percentile: float,
 ) -> list[tuple[NameEntry, NameEntry]]:
     """`first`/`last`: the constrained part is drawn distinct *globally*.
 
@@ -142,10 +169,12 @@ def _draw_unique_part(
         if not positions:
             continue
         needed = len(positions)
-        constrained_all = (
+        constrained_all = _banded(
             load_first_names(profile.code, persona_gender)
             if mode == "first"
-            else load_surnames(profile.code, persona_gender)
+            else load_surnames(profile.code, persona_gender),
+            min_percentile,
+            max_percentile,
         )
         available = tuple(e for e in constrained_all if e.name not in taken)
         if needed > len(available):
@@ -156,9 +185,13 @@ def _draw_unique_part(
         drawn = NameSampler(available, weighted=weighted).sample_many(rng, needed)
         taken.update(entry.name for entry in drawn)
         other_pool = NameSampler(
-            load_surnames(profile.code, persona_gender)
-            if mode == "first"
-            else load_first_names(profile.code, persona_gender),
+            _banded(
+                load_surnames(profile.code, persona_gender)
+                if mode == "first"
+                else load_first_names(profile.code, persona_gender),
+                min_percentile,
+                max_percentile,
+            ),
             weighted=weighted,
         )
         for position, entry in zip(positions, drawn):
@@ -174,6 +207,8 @@ def _draw_unique_full(
     profile: OriginProfile,
     genders: list[Gender],
     weighted: bool,
+    min_percentile: float,
+    max_percentile: float,
 ) -> list[tuple[NameEntry, NameEntry]]:
     """`full`: given and surname drawn independently (either may recur); each
     persona is redrawn until its *whole* name has not been used yet. The
@@ -185,10 +220,14 @@ def _draw_unique_full(
         if persona_gender not in samplers:
             samplers[persona_gender] = (
                 NameSampler(
-                    load_first_names(profile.code, persona_gender), weighted=weighted
+                    _banded(load_first_names(profile.code, persona_gender),
+                            min_percentile, max_percentile),
+                    weighted=weighted,
                 ),
                 NameSampler(
-                    load_surnames(profile.code, persona_gender), weighted=weighted
+                    _banded(load_surnames(profile.code, persona_gender),
+                            min_percentile, max_percentile),
+                    weighted=weighted,
                 ),
             )
         return samplers[persona_gender]
@@ -264,6 +303,8 @@ def generate_personas(
     domains: tuple[str, ...] | None = None,
     min_age: int = _DEFAULT_MIN_AGE,
     max_age: int = _DEFAULT_MAX_AGE,
+    min_percentile: float = _DEFAULT_MIN_PERCENTILE,
+    max_percentile: float = _DEFAULT_MAX_PERCENTILE,
 ) -> list[Persona]:
     """Build `count` coherent personas for one origin.
 
@@ -279,6 +320,11 @@ def generate_personas(
     (the default) draws each name independently, where names may repeat.
     Asking for more unique values than the origin's pool can supply raises
     `ValueError`.
+
+    `min_percentile`/`max_percentile` bound how common a drawn name may be:
+    entries outside this percentile band are excluded, so the output skips both
+    the "John Doe" most-frequent names and the rarest, least placeable ones.
+    Pass `0.0`/`100.0` to disable the band.
     """
     if unique is not None and unique not in UNIQUE_MODES:
         raise ValueError(
@@ -301,10 +347,14 @@ def generate_personas(
         for index in range(count):
             persona_gender = gender or rng.choice((Gender.MALE, Gender.FEMALE))
             given = NameSampler(
-                load_first_names(profile.code, persona_gender), weighted=weighted
+                _banded(load_first_names(profile.code, persona_gender),
+                        min_percentile, max_percentile),
+                weighted=weighted,
             ).sample(rng)
             family = NameSampler(
-                load_surnames(profile.code, persona_gender), weighted=weighted
+                _banded(load_surnames(profile.code, persona_gender),
+                        min_percentile, max_percentile),
+                weighted=weighted,
             ).sample(rng)
             personas.append(_one(index, persona_gender, given, family))
         return personas
@@ -313,7 +363,9 @@ def generate_personas(
     genders = [
         gender or rng.choice((Gender.MALE, Gender.FEMALE)) for _ in range(count)
     ]
-    pairs = _draw_unique(rng, profile, genders, weighted, unique)
+    pairs = _draw_unique(
+        rng, profile, genders, weighted, unique, min_percentile, max_percentile
+    )
     for index, (persona_gender, (given, family)) in enumerate(zip(genders, pairs)):
         personas.append(_one(index, persona_gender, given, family))
     return personas

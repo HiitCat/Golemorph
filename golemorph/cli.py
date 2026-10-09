@@ -14,7 +14,11 @@ from contextlib import nullcontext
 
 from .loader import origins
 from .models import Gender, Persona
-from .persona import generate_personas
+from .persona import (
+    _DEFAULT_MAX_PERCENTILE,
+    _DEFAULT_MIN_PERCENTILE,
+    generate_personas,
+)
 
 class _PaddedParser(argparse.ArgumentParser):
     """ArgumentParser that frames its help text with a blank line above and
@@ -74,6 +78,22 @@ def build_parser() -> argparse.ArgumentParser:
         type=int,
         help="RNG seed for reproducible campaigns (also seeds --unique redraws, "
         "so retries never silently shift the draw)",
+    )
+    parser.add_argument(
+        "--min-common",
+        type=float,
+        default=_DEFAULT_MIN_PERCENTILE,
+        metavar="PCT",
+        help="exclude names rarer than this percentile (0-100) so personas "
+        "avoid odd, unplaceable names; 0 keeps every name",
+    )
+    parser.add_argument(
+        "--max-common",
+        type=float,
+        default=_DEFAULT_MAX_PERCENTILE,
+        metavar="PCT",
+        help="exclude names more common than this percentile (0-100) so "
+        "personas avoid the 'John Doe' effect; 100 keeps every name",
     )
     parser.add_argument(
         "-f",
@@ -227,6 +247,8 @@ def main(argv: list[str] | None = None) -> None:
             seed=args.seed,
             weighted=not args.unweighted,
             unique=args.unique,
+            min_percentile=args.min_common,
+            max_percentile=args.max_common,
         )
     except ValueError as exc:
         # Known, user-facing failures (unknown origin, pool too small for
