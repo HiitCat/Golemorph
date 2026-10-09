@@ -12,6 +12,7 @@ role all follow the chosen origin, across 45 locales.
 [![PyPI](https://img.shields.io/pypi/v/golemorph.svg)](https://pypi.org/project/golemorph/)
 [![Python](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![X](https://img.shields.io/twitter/url/https/twitter.com/hitc_at.svg?style=social&label=%40hitc_at)](https://x.com/hitc_at)
 
 <img src="https://raw.githubusercontent.com/HiitCat/Golemorph/main/docs/assets/demo.png" alt="Golemorph generating a batch of French personas" width="900">
 
