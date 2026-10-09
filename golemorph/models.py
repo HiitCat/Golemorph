@@ -52,6 +52,7 @@ class OriginProfile:
     label: str
     language: str
     nationality: str
+    region: str
     name_order: str  # "given-first" or "family-first"
     dial_code: str
     phone_format: str  # template: {d} dial code, {p} mobile prefix, {g1..} number groups

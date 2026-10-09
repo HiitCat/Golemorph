@@ -82,12 +82,23 @@ def test_list_origins_prints_every_locale_and_exits(capsys):
     from golemorph.loader import load_manifest
 
     main(["--list-origins"])
-    lines = capsys.readouterr().out.strip().splitlines()
-    codes = {line.split("\t")[0] for line in lines}
-    assert codes == set(load_manifest())
-    assert len(lines) == 45
-    fra = next(line for line in lines if line.startswith("FRA"))
-    assert "lang=fr" in fra and "order=given-first" in fra and "tel=+33" in fra
+    out = capsys.readouterr().out
+
+    # Parse the rich box table: split each row on the vertical rule and keep
+    # the data rows. Columns are LABEL, CODE, LANG, DIAL; code is column 1.
+    codes = {}
+    for line in out.splitlines():
+        if "│" not in line:
+            continue
+        cells = [c.strip() for c in line.strip().strip("│").split("│")]
+        code = cells[1] if len(cells) > 1 else ""
+        if len(code) == 3 and code.isalpha() and code.isupper():
+            codes[code] = cells
+
+    assert set(codes) == set(load_manifest())
+    assert len(codes) == 45
+    fra = codes["FRA"]
+    assert fra[0] == "French" and fra[2] == "fr" and fra[3] == "+33"
 
 
 def test_main_writes_bare_names_to_stdout(capsys):

@@ -82,10 +82,10 @@ East and Asia-Pacific:
 
 | Group | Origins |
 |---|---|
-| Europe | `AUT`, `BEL`, `BGR`, `CZE`, `DEU`, `DNK`, `ESP`, `FIN`, `FRA`, `GBR`, `GRC`, `HRV`, `HUN`, `IRL`, `ITA`, `NLD`, `NOR`, `POL`, `PRT`, `RUS`, `SUI`, `SVN`, `SWE`, `TUR` |
-| Americas | `ARG`, `BRA`, `CAN`, `COL`, `MEX`, `USA` |
-| Africa / MENA | `ALG`, `EGY`, `MRN`, `NGA`, `SAU`, `TUN`, `ZAF` |
-| Asia-Pacific | `CHN`, `IDN`, `IND`, `JPN`, `KOR`, `MYS`, `PHL`, `SGP` |
+| Europe | 🇦🇹 `AUT`, 🇧🇪 `BEL`, 🇧🇬 `BGR`, 🇨🇿 `CZE`, 🇩🇪 `DEU`, 🇩🇰 `DNK`, 🇪🇸 `ESP`, 🇫🇮 `FIN`, 🇫🇷 `FRA`, 🇬🇧 `GBR`, 🇬🇷 `GRC`, 🇭🇷 `HRV`, 🇭🇺 `HUN`, 🇮🇪 `IRL`, 🇮🇹 `ITA`, 🇳🇱 `NLD`, 🇳🇴 `NOR`, 🇵🇱 `POL`, 🇵🇹 `PRT`, 🇷🇺 `RUS`, 🇨🇭 `SUI`, 🇸🇮 `SVN`, 🇸🇪 `SWE`, 🇹🇷 `TUR` |
+| Americas | 🇦🇷 `ARG`, 🇧🇷 `BRA`, 🇨🇦 `CAN`, 🇨🇴 `COL`, 🇲🇽 `MEX`, 🇺🇸 `USA` |
+| Africa / MENA | 🇩🇿 `ALG`, 🇪🇬 `EGY`, 🇲🇦 `MRN`, 🇳🇬 `NGA`, 🇸🇦 `SAU`, 🇹🇳 `TUN`, 🇿🇦 `ZAF` |
+| Asia-Pacific | 🇨🇳 `CHN`, 🇮🇩 `IDN`, 🇮🇳 `IND`, 🇯🇵 `JPN`, 🇰🇷 `KOR`, 🇲🇾 `MYS`, 🇵🇭 `PHL`, 🇸🇬 `SGP` |
 
 Full table with language, name order, dial code and nationality wording:
 [`docs/origins.md`](docs/origins.md).

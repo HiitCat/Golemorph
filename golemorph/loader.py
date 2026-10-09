@@ -43,6 +43,7 @@ def load_origin(code: str) -> OriginProfile:
         label=entry["label"],
         language=entry["language"],
         nationality=entry["nationality"],
+        region=entry["region"],
         name_order=entry["name_order"],
         dial_code=str(entry["dial_code"]),
         phone_format=entry["phone_format"],

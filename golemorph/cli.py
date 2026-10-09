@@ -87,6 +87,62 @@ def build_parser() -> argparse.ArgumentParser:
     return parser
 
 
+# Region display order; anything not listed is appended alphabetically after.
+_REGION_ORDER = ("Europe", "Americas", "Africa & MENA", "Asia-Pacific")
+
+
+def _print_origins() -> None:
+    """Pretty, color listing of origins for `--list-origins`, one table per
+    region.
+
+    `rich.Console` detects the terminal: full color + box when attached to a
+    TTY, plain text when piped or redirected (and it honors NO_COLOR), so a
+    `golemorph --list-origins | grep` stays clean on its own.
+    """
+    from rich.console import Console
+    from rich.table import Table
+
+    # Bucket origins by region, preserving the loader's alphabetical order
+    # within each group.
+    groups: dict[str, list] = {}
+    for p in origins():
+        groups.setdefault(p.region, []).append(p)
+
+    ordered = [r for r in _REGION_ORDER if r in groups]
+    ordered += sorted(r for r in groups if r not in _REGION_ORDER)
+
+    # Fixed per-column widths, computed once across *all* origins, so every
+    # region table lines up to the same total width instead of each shrinking
+    # to its own group's content.
+    headers = ("LABEL", "CODE", "LANG", "DIAL")
+    all_rows = [
+        (p.label, p.code, p.language, p.dial_code) for p in origins()
+    ]
+    widths = [
+        max(len(headers[i]), *(len(r[i]) for r in all_rows))
+        for i in range(len(headers))
+    ]
+
+    console = Console()
+    for i, region in enumerate(ordered):
+        if i:
+            console.print()  # blank line between tables
+        members = groups[region]
+        table = Table(
+            title=f"{region} ({len(members)})",
+            header_style="bold cyan",
+            title_style="bold magenta",
+            title_justify="left",
+        )
+        table.add_column("LABEL", style="green", width=widths[0])
+        table.add_column("CODE", style="yellow", no_wrap=True, width=widths[1])
+        table.add_column("LANG", no_wrap=True, width=widths[2])
+        table.add_column("DIAL", style="dim", no_wrap=True, width=widths[3])
+        for p in members:
+            table.add_row(p.label, p.code, p.language, p.dial_code)
+        console.print(table)
+
+
 def _write(format: str, personas: list[Persona], stream) -> None:
     """Serialize personas in the requested export format."""
     if format == "name":
@@ -110,16 +166,7 @@ def _write(format: str, personas: list[Persona], stream) -> None:
 def main(argv: list[str] | None = None) -> None:
     args = build_parser().parse_args(argv)
     if args.list_origins:
-        for profile in origins():
-            # The dial code is resolved into the template so the listing shows
-            # the number the caller actually gets ("tel=+33 6 …"), not "{d}".
-            # Only {d} is filled: {p}/{gN} stay as placeholders to be drawn per persona.
-            phone = profile.phone_format.replace("{d}", profile.dial_code)
-            print(
-                f"{profile.code}\t{profile.label}\t"
-                f"lang={profile.language} order={profile.name_order} "
-                f"tel={phone}"
-            )
+        _print_origins()
         return
     try:
         personas = generate_personas(

@@ -6,6 +6,7 @@ version: 3
 
 origins:
   FRA:
+    region: Europe
     label: French
     language: fr
     nationality: French
@@ -27,6 +28,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - FR top-500 surname ranks
 
   RUS:
+    region: Europe
     label: Russian
     language: ru
     nationality: Russian
@@ -50,6 +52,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - RU top-500 surname ranks
 
   CHN:
+    region: Asia-Pacific
     label: Chinese
     language: zh
     nationality: Chinese
@@ -71,6 +74,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - CN top-500 surname ranks
 
   ALG:
+    region: Africa & MENA
     label: Algerian
     language: ar
     nationality: Algerian
@@ -92,6 +96,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - DZ top-500 surname ranks
 
   MRN:
+    region: Africa & MENA
     label: Moroccan
     language: ar
     nationality: Moroccan
@@ -113,6 +118,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - MA top-500 surname ranks
 
   DEU:
+    region: Europe
     label: German
     language: de
     nationality: German
@@ -134,6 +140,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - DE top-500 surname ranks
 
   ITA:
+    region: Europe
     label: Italian
     language: it
     nationality: Italian
@@ -155,6 +162,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - IT top-500 surname ranks
 
   ESP:
+    region: Europe
     label: Spanish
     language: es
     nationality: Spanish
@@ -176,6 +184,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - ES top-500 surname ranks
 
   PRT:
+    region: Europe
     label: Portuguese
     language: pt
     nationality: Portuguese
@@ -196,6 +205,7 @@ origins:
         file: PRT/Surname.csv
         source: names-dataset 3.3.1 (Facebook, ~533M users) - PT top-500 surname ranks
   GBR:
+    region: Europe
     label: English
     language: en
     nationality: British
@@ -217,6 +227,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - GB top-500 surname ranks
 
   IRL:
+    region: Europe
     label: Irish
     language: en
     nationality: Irish
@@ -238,6 +249,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - IE top-500 surname ranks
 
   BEL:
+    region: Europe
     label: Belgian
     language: nl-fr
     nationality: Belgian
@@ -259,6 +271,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - BE top-500 surname ranks
 
   NLD:
+    region: Europe
     label: Dutch
     language: nl
     nationality: Dutch
@@ -280,6 +293,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - NL top-500 surname ranks
 
   SUI:
+    region: Europe
     label: Swiss
     language: de-fr-it
     nationality: Swiss
@@ -301,6 +315,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - CH top-500 surname ranks
 
   AUT:
+    region: Europe
     label: Austrian
     language: de
     nationality: Austrian
@@ -321,6 +336,7 @@ origins:
         file: AUT/Surname.csv
         source: names-dataset 3.3.1 (Facebook, ~533M users) - AT top-500 surname ranks
   POL:
+    region: Europe
     label: Polish
     language: pl
     nationality: Polish
@@ -342,6 +358,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - PL top-500 surname ranks
 
   CZE:
+    region: Europe
     label: Czech
     language: cs
     nationality: Czech
@@ -363,6 +380,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - CZ top-500 surname ranks
 
   HUN:
+    region: Europe
     label: Hungarian
     language: hu
     nationality: Hungarian
@@ -384,6 +402,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - HU top-500 surname ranks
 
   GRC:
+    region: Europe
     label: Greek
     language: el
     nationality: Greek
@@ -405,6 +424,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - GR top-500 surname ranks
 
   BGR:
+    region: Europe
     label: Bulgarian
     language: bg
     nationality: Bulgarian
@@ -426,6 +446,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - BG top-500 surname ranks
 
   HRV:
+    region: Europe
     label: Croatian
     language: hr
     nationality: Croatian
@@ -446,6 +467,7 @@ origins:
         file: HRV/Surname.csv
         source: names-dataset 3.3.1 (Facebook, ~533M users) - HR top-500 surname ranks
   SVN:
+    region: Europe
     label: Slovenian
     language: sl
     nationality: Slovenian
@@ -467,6 +489,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - SI top-500 surname ranks
 
   DNK:
+    region: Europe
     label: Danish
     language: da
     nationality: Danish
@@ -488,6 +511,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - DK top-500 surname ranks
 
   NOR:
+    region: Europe
     label: Norwegian
     language: "no"
     nationality: Norwegian
@@ -509,6 +533,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - NO top-500 surname ranks
 
   SWE:
+    region: Europe
     label: Swedish
     language: sv
     nationality: Swedish
@@ -530,6 +555,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - SE top-500 surname ranks
 
   FIN:
+    region: Europe
     label: Finnish
     language: fi
     nationality: Finnish
@@ -551,6 +577,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - FI top-500 surname ranks
 
   TUR:
+    region: Europe
     label: Turkish
     language: tr
     nationality: Turkish
@@ -571,6 +598,7 @@ origins:
         file: TUR/Surname.csv
         source: names-dataset 3.3.1 (Facebook, ~533M users) - TR top-500 surname ranks
   TUN:
+    region: Africa & MENA
     label: Tunisian
     language: ar
     nationality: Tunisian
@@ -592,6 +620,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - TN top-500 surname ranks
 
   EGY:
+    region: Africa & MENA
     label: Egyptian
     language: ar
     nationality: Egyptian
@@ -613,6 +642,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - EG top-500 surname ranks
 
   SAU:
+    region: Africa & MENA
     label: Saudi
     language: ar
     nationality: Saudi
@@ -634,6 +664,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - SA top-500 surname ranks
 
   USA:
+    region: Americas
     label: American
     language: en
     nationality: American
@@ -655,6 +686,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - US top-500 surname ranks
 
   CAN:
+    region: Americas
     label: Canadian
     language: en
     nationality: Canadian
@@ -675,6 +707,7 @@ origins:
         file: CAN/Surname.csv
         source: names-dataset 3.3.1 (Facebook, ~533M users) - CA top-500 surname ranks
   BRA:
+    region: Americas
     label: Brazilian
     language: pt
     nationality: Brazilian
@@ -698,6 +731,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - BR top-500 surname ranks
 
   MEX:
+    region: Americas
     label: Mexican
     language: es
     nationality: Mexican
@@ -721,6 +755,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - MX top-500 surname ranks
 
   COL:
+    region: Americas
     label: Colombian
     language: es
     nationality: Colombian
@@ -742,6 +777,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - CO top-500 surname ranks
 
   ARG:
+    region: Americas
     label: Argentine
     language: es
     nationality: Argentine
@@ -764,6 +800,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - AR top-500 surname ranks
 
   JPN:
+    region: Asia-Pacific
     label: Japanese
     language: ja
     nationality: Japanese
@@ -784,6 +821,7 @@ origins:
         file: JPN/Surname.csv
         source: names-dataset 3.3.1 (Facebook, ~533M users) - JP top-500 surname ranks
   KOR:
+    region: Asia-Pacific
     label: Korean
     language: ko
     nationality: Korean
@@ -805,6 +843,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - KR top-500 surname ranks
 
   IND:
+    region: Asia-Pacific
     label: Indian
     language: hi
     nationality: Indian
@@ -826,6 +865,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - IN top-500 surname ranks
 
   IDN:
+    region: Asia-Pacific
     label: Indonesian
     language: id
     nationality: Indonesian
@@ -847,6 +887,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - ID top-500 surname ranks
 
   PHL:
+    region: Asia-Pacific
     label: Filipino
     language: tl
     nationality: Filipino
@@ -868,6 +909,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - PH top-500 surname ranks
 
   MYS:
+    region: Asia-Pacific
     label: Malaysian
     language: ms
     nationality: Malaysian
@@ -888,6 +930,7 @@ origins:
         file: MYS/Surname.csv
         source: names-dataset 3.3.1 (Facebook, ~533M users) - MY top-500 surname ranks
   SGP:
+    region: Asia-Pacific
     label: Singaporean
     language: en
     nationality: Singaporean
@@ -909,6 +952,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - SG top-500 surname ranks
 
   NGA:
+    region: Africa & MENA
     label: Nigerian
     language: en
     nationality: Nigerian
@@ -930,6 +974,7 @@ origins:
         source: names-dataset 3.3.1 (Facebook, ~533M users) - NG top-500 surname ranks
 
   ZAF:
+    region: Africa & MENA
     label: South African
     language: en
     nationality: South African
