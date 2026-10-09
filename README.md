@@ -22,8 +22,8 @@ pip install -e .
 pip install -r requirements-dev.txt
 ```
 
-Or run it straight from the repo root without installing (needs PyYAML -
-`pip install -r requirements.txt`):
+Or run it straight from the repo root without installing (needs its runtime
+deps, PyYAML and rich - `pip install -r requirements.txt`):
 
 ```bash
 python3 -m golemorph --help
@@ -32,8 +32,9 @@ python3 -m golemorph --help
 ## Quick start
 
 ```bash
-# 45 supported origins
+# 45 supported origins, grouped by region (filter: europe|americas|africa|asia)
 golemorph --list-origins
+golemorph --list-origins europe
 
 # Five Russian personas, full JSON records
 golemorph -o RUS -n 5 --format json
@@ -45,31 +46,38 @@ golemorph -o FRA -n 100 -f gophish --output targets.csv
 golemorph -o DEU -n 50 --unique --seed 7
 ```
 
-With no arguments, Golemorph prints a single bare American persona name (the
-default origin is `USA`).
+With no arguments, Golemorph prints a single American persona (the default
+origin is `USA`) as a table. The default `name` format renders a rich,
+color table - name, age, birth year, city, language, role, phone, email and
+the `commonality` score; use `-f csv`/`json` for machine-readable output.
 
 ## Options
 
 | Flag | Meaning | Default |
 |---|---|---|
-| `-o, --origin CODE` | `--list-origins` for codes) | `USA` |
+| `-o, --origin CODE` | Origin code (see `--list-origins`) | `USA` |
 | `-n, --count N` | Personas to generate | `1` |
 | `-u, --unique [PART]` | No repeats across the run: `full` whole name (default), `first` given names, `last` surnames | off |
 | `-g, --gender G` | `Male` or `Female`; unset draws per-name gender from the dataset | mixed |
-| `-f, --format FMT` | `name` (bare name), `csv`, `json`, or `gophish` | `name` |
+| `-f, --format FMT` | `name` (rich table), `csv`, `json`, or `gophish` | `name` |
 | `--unweighted` | Uniform sampling instead of frequency-weighted | weighted |
+| `--min-common PCT` | Exclude names rarer than this percentile (`0` keeps all) | `10` |
+| `--max-common PCT` | Exclude names more common than this percentile, avoiding the "John Doe" effect (`100` keeps all) | `95` |
 | `--seed N` | Reproducible output | random |
-| `--output FILE` | Write `csv`/`json`/`gophish` to a file instead of stdout | stdout |
-| `--list-origins` | Print the origin table and exit | - |
+| `--output FILE` | Write output to a file instead of stdout | stdout |
+| `--list-origins [GROUP]` | Print the origins table and exit; optional `GROUP` filter (`all`, `europe`, `americas`, `africa`, `asia`) | - |
 
 ## Output formats
 
-- **`name`** (default): one persona's full name per line.
+- **`name`** (default): a rich, color table of the headline fields - name,
+  age, birth year, city, language, role, phone, email and `commonality`.
+  Color and box drawing are dropped automatically when the output is piped or
+  redirected.
 - **`csv`**: one row per persona with the full record - `id`, `gender`,
   `first_name`, `last_name`, `origin_code`, `origin_label`, `nationality`,
   `language`, `name_order`, `birth_year`, `age`, `email`, `phone`, `city`,
   `role`, `first_name_percentile`, `last_name_percentile`, `commonality`,
-  `first_name_source`, `last_name_source`, `full_name`.
+  `full_name`.
 - **`json`**: one JSON array of full records, same fields as the CSV.
 - **`gophish`**: the GoPhish group-import template - `First Name, Last Name,
   Email, Position` rows (Position carries the persona's role), ready to import
@@ -100,6 +108,9 @@ CSVs generated from
 - **Frequency-weighted** sampling, with long-tail counts decayed along a
   Zipf-like curve so mid-tier names are drawn far more often than raw counts
   alone would suggest. `--unweighted` switches to uniform.
+- **Credible band**: by default the draw is bounded to a percentile band
+  (`--min-common` / `--max-common`) that drops both the most common names,
+  which read as "John Doe" placeholders, and the rarest, least placeable ones.
 - **Unique names**: `--unique` rejects and redraws duplicates so a chosen part
   of the name never repeats across the run - `full` (whole name, the default),
   `first` (given names) or `last` (surnames). `--unique full` still lets a
@@ -110,10 +121,15 @@ CSVs generated from
 - Per-origin filters: Korean given names are restricted to ASCII (Hangul
   folds poorly to the email slug), and the `"Abu ..."` family-name prefix is
   dropped from MENA given names.
-- Emails are built from the persona's name slug and a regional domain; phone
-  numbers follow the origin's dial code and mobile prefix; names with no
-  ASCII slug (all-CJK, and Cyrillic-only) fall back to a `user<digits>` local
-  part.
+- Surnames drop standalone name *particles* (`El`, `Ben`, `Da`, `De`, `Von`,
+  `Ait`, ...) that the source stores as entries in their own right because it
+  splits compound names on the space; genuine short surnames that collide with
+  those tokens (`Le`, `Do`, `Du`, `Ba`, `Das`, `Dal`) are kept.
+- Emails mix several realistic local-part layouts (`first.last`, `firstlast`,
+  `jdupont`, `j.dupont`, `jean.d`, `dupont.jean`, with an optional numeric
+  suffix) over a regional domain; phone numbers follow the origin's dial code
+  and mobile prefix; names with no ASCII slug (all-CJK, and Cyrillic-only) fall
+  back to a `user<digits>` local part.
 
 Regenerate the shipped data. The source dataset ships inside the
 [`names-dataset`](https://pypi.org/project/names-dataset/) package (a dev

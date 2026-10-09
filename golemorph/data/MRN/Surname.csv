@@ -1,9 +1,7 @@
 name,frequency
-El,1000000
 Rajawi,500000
 Mohamed,333333
 Simo,250000
-Ben,200000
 Abdo,166667
 Fati,142857
 Said,125000
@@ -121,7 +119,6 @@ Maryam,8403
 Hanan,8333
 Reda,8264
 Driss,8197
-De,8130
 Walid,8065
 Solo,8000
 Koko,7937
@@ -135,7 +132,6 @@ Slimani,7519
 Tarik,7463
 Zakaria,7407
 Radi,7353
-Ait,7299
 Kh,7246
 El Idrissi,7194
 Kawtar,7143
@@ -162,7 +158,6 @@ Mostafa,6250
 Abdellah,6211
 Sahara,6173
 Nizar,6135
-Bou,6098
 Ayman,6061
 Ahlam,6024
 Houda,5988
@@ -175,7 +170,6 @@ Ed,5780
 Zin,5747
 Hasan,5714
 Taha,5682
-Al,5650
 Mounir,5618
 Salam,5587
 Hayat,5556
@@ -312,7 +306,6 @@ Issam,3226
 Nadir,3215
 Ibrahimi,3205
 Lahcen,3195
-Abd,3185
 Najib,3175
 Mansour,3165
 Lola,3155
@@ -332,7 +325,6 @@ Manar,3030
 Hamada,3021
 Sahrawi,3012
 Female,3003
-Da,2994
 Soufiane,2985
 Dak,2976
 Chafik,2967
@@ -499,3 +491,11 @@ Anouar,2012
 Kokita,2008
 Darif,2004
 Sd,2000
+Dada,1996
+Rahmani,1992
+Mn,1988
+Adnan,1984
+Man,1980
+Mabrouk,1976
+Najah,1972
+Taki,1969

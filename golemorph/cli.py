@@ -202,6 +202,7 @@ def _write(format: str, personas: list[Persona], stream) -> None:
 
         table = Table(header_style="bold cyan")
         table.add_column("NAME", style="bold green")
+        table.add_column("SEX", no_wrap=True)
         table.add_column("AGE", justify="right", no_wrap=True)
         table.add_column("BORN", justify="right", no_wrap=True)
         table.add_column("CITY")
@@ -212,7 +213,8 @@ def _write(format: str, personas: list[Persona], stream) -> None:
         table.add_column("COMMON", justify="right", no_wrap=True)
         for p in personas:
             table.add_row(
-                p.full_name, str(p.age), str(p.birth_year), p.city,
+                p.full_name, p.gender.value if p.gender else "",
+                str(p.age), str(p.birth_year), p.city,
                 p.language, p.role, p.phone, p.email, f"{p.commonality}%",
             )
         console = Console(file=stream)

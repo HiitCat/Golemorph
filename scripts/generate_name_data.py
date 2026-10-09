@@ -25,6 +25,9 @@ Relative weights inside a dataset - all the sampler needs - are preserved.
 
 Locale filters (all applied inline, *before* the top-N slice):
 
+* All locales - both kinds: keep only Latin-script spellings (accents allowed,
+  e.g. `José`), so native-script entries (Arabic, Cyrillic, Greek, CJK, Hangul)
+  are dropped in favour of their romanized forms and emails stay name-based.
 * CN/JP/KR - given names: drop names also in the US Top 1000 (the Facebook
   population in those countries skews to overseas users, so the US list is the
   cheapest diaspora proxy); JP additionally drops the BR Top 1000 (a
@@ -37,6 +40,9 @@ Locale filters (all applied inline, *before* the top-N slice):
   names do not displace the romanized ones used on English-language mail.
 * MENA (ALG/MRN/TUN/EGY/SAU) - strip leading `Abu ` / `ابو ` patronymic
   prefixes, which are honorifics rather than given names.
+* All locales - surnames: drop standalone name *particles* (El, Da, De, Von,
+  ...; see :data:`SURNAME_PARTICLE_STOPLIST`), which are compound-name
+  fragments split by the source, not family names.
 
 Usage:
     pip install -r requirements-dev.txt   # provides names-dataset + PyYAML
@@ -47,6 +53,7 @@ from __future__ import annotations
 
 import csv
 import sys
+import unicodedata
 from pathlib import Path
 
 import yaml
@@ -69,6 +76,20 @@ ASCII_ONLY_GIVEN = {"KR"}
 # Locales where leading Abu/ابو patronymics are stripped from both name kinds.
 MENA_ABU_STRIP = {"DZ", "MA", "TN", "EG", "SA"}
 ABU_PREFIXES = ("Abu ", "ابو ")
+
+# Name *particles* that `names-dataset` stores as standalone surname entries
+# because Facebook splits compound names ("El Amrani", "Da Silva", "Von Trapp")
+# on the space. On their own they are not family names, yet their aggregated
+# rank can place them absurdly high in a locale's list, so they are dropped
+# from SURNAMES only (several double as real given names, e.g. "Ben").
+# Deliberately excluded: Le, La, Lo, Do, Ba, Du, Das, Dal - genuine standalone
+# surnames (Vietnamese Lê/Đỗ, Chinese Lo/Du 杜, Fula Ba, Indian/Bengali Das,
+# Turkish Dal), kept to avoid false negatives despite colliding with particles.
+SURNAME_PARTICLE_STOPLIST = {
+    "el", "al", "ben", "bin", "ibn", "abu", "abou", "ait", "ould", "oulad",
+    "bou", "abd", "sidi", "si", "da", "de", "di", "del", "della",
+    "dei", "des", "dos", "van", "von", "der", "den", "ter", "zu",
+}
 
 
 def load_datasets() -> tuple[dict, dict]:
@@ -116,6 +137,24 @@ def given_gender(entry: dict) -> str:
     return "Male" if split["M"] >= 0.5 else ""
 
 
+def is_latin(name: str) -> bool:
+    """True if every letter in `name` is Latin script (accents allowed, e.g.
+    `José`, `Francçois`, `Müller`). Non-Latin scripts - Arabic, Cyrillic,
+    Greek, CJK, Hangul, ... - are rejected so each locale keeps only its
+    romanized/Latin spellings. A name with no letters (digits/punctuation
+    only) is rejected too."""
+    letters = [c for c in name if c.isalpha()]
+    if not letters:
+        return False
+    for c in letters:
+        try:
+            if not unicodedata.name(c).startswith("LATIN"):
+                return False
+        except ValueError:  # unnamed char: treat as non-Latin
+            return False
+    return True
+
+
 def strip_abu(name: str) -> str:
     for prefix in ABU_PREFIXES:
         if name.startswith(prefix):
@@ -144,6 +183,10 @@ def select_rows(
         if iso2 in MENA_ABU_STRIP:
             name = strip_abu(name)
         if not name or name in excluded:
+            continue
+        if not is_latin(name):  # keep only romanized/Latin spellings
+            continue
+        if kind == "surname" and name.lower() in SURNAME_PARTICLE_STOPLIST:
             continue
         if kind == "given" and iso2 in ASCII_ONLY_GIVEN and not name.isascii():
             continue

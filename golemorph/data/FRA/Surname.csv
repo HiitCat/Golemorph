@@ -5,7 +5,6 @@ Dubois,333333
 Thomas,250000
 Garcia,200000
 Petit,166667
-Ben,142857
 Dupont,125000
 Durand,111111
 Michel,100000
@@ -124,7 +123,6 @@ Gaillard,8197
 Marques,8130
 Giraud,8065
 Leclerc,8000
-El,7937
 Renaud,7874
 Charles,7812
 Lou,7752
@@ -147,7 +145,6 @@ Teixeira,6897
 Ly,6849
 Dumas,6803
 Lecomte,6757
-Bou,6711
 Vasseur,6667
 Sow,6623
 Hubert,6579
@@ -370,7 +367,6 @@ Chou,2717
 Almeida,2710
 Machado,2703
 Kaya,2695
-Del,2688
 Leveque,2681
 Gaudin,2674
 Alain,2667
@@ -499,3 +495,7 @@ Fouquet,2012
 Hervé,2008
 Boutin,2004
 Jacquot,2000
+Jan,1996
+Amar,1992
+Munoz,1988
+Gomis,1984

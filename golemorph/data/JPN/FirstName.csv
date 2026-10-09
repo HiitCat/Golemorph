@@ -287,7 +287,6 @@ Tanaka,Male,3497
 Kazu,Male,3484
 Chikako,Female,3472
 Shuichi,Male,3460
-太郎,Male,3448
 Akihiko,Male,3436
 Keiji,Male,3425
 Yasuo,Male,3413
@@ -393,13 +392,11 @@ Akinori,Male,2532
 Yudai,Male,2525
 Ito,Male,2519
 Yasunori,Male,2513
-大輔,Male,2506
 Tetsuro,Male,2500
 Riho,Female,2494
 Kazuyoshi,Male,2488
 Nakamura,Male,2481
 Noriaki,Male,2475
-裕子,Female,2469
 Norio,Male,2463
 Kazue,Female,2457
 Jiro,Male,2451
@@ -425,7 +422,6 @@ Kouji,Male,2336
 Riku,Male,2331
 Hanako,Female,2326
 Yamada,Male,2320
-陽子,Female,2315
 Mikio,Male,2309
 Ryoji,Male,2304
 Kobayashi,Male,2299
@@ -447,14 +443,10 @@ Mitsuko,Female,2217
 Hinako,Female,2212
 Shino,Male,2208
 Miyako,Female,2203
-直樹,Male,2198
 Tomoka,Female,2193
 Ryoichi,Male,2188
-智子,Female,2183
 Yoshinobu,Male,2179
-達也,Male,2174
 Kato,Male,2169
-健太,Male,2160
 Honoka,Female,2155
 Aika,Female,2151
 Hisako,Female,2146
@@ -485,7 +477,6 @@ Mihoko,Female,2041
 Yasu,Male,2037
 Masahito,Male,2033
 Kazuyo,Female,2028
-恵子,Female,2024
 Takaya,Male,2020
 Haruko,Female,2016
 Tamaki,Female,2012
@@ -499,3 +490,12 @@ Yukino,Female,1984
 Hiroya,Male,1980
 Toshikazu,Male,1976
 Katsuhiko,Male,1972
+Ayane,Female,1969
+Nagisa,Female,1965
+Masae,Female,1961
+Hiromitsu,Male,1957
+Takayoshi,Male,1949
+Sachie,Female,1946
+Wakako,Female,1942
+Shigeo,Male,1938
+Masaharu,Male,1934

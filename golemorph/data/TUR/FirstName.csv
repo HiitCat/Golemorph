@@ -16,7 +16,6 @@ Hakan,Male,71429
 Ibrahim,Male,66667
 Fatih,Male,62500
 Ayşe,Female,58824
-محمد,Male,55556
 Emine,Female,52632
 Ismail,Male,50000
 Kadir,Male,47619
@@ -57,7 +56,6 @@ Ercan,Male,18182
 Emrah,Male,17857
 Serdar,Male,17544
 Esra,Female,17241
-احمد,Male,16949
 Samet,Male,16667
 Mesut,Male,16393
 Kenan,Male,16129
@@ -73,7 +71,6 @@ Erol,Male,14286
 Yaşar,Male,13889
 Erdal,Male,13699
 Yakup,Male,13514
-ابو,Male,13333
 Dilek,Female,13158
 Ümit,Male,12987
 Yılmaz,Male,12821
@@ -167,7 +164,6 @@ Dursun,Male,6061
 Sultan,Male,6024
 Oğuzhan,Male,5988
 Berat,Male,5952
-محمود,Male,5917
 Yüksel,Male,5882
 Gül,Female,5848
 Turan,Male,5814
@@ -180,7 +176,6 @@ Alper,Male,5618
 Memet,Male,5587
 Canan,Female,5556
 Bahar,Female,5525
-علي,Male,5495
 Eyüp,Male,5464
 Tuğba,Female,5435
 Buse,Female,5405
@@ -283,8 +278,6 @@ Yahya,Male,3559
 Nazlı,Female,3546
 Tülay,Female,3534
 Melisa,Female,3521
-مصطفى,Male,3509
-حسن,Male,3497
 Ilyas,Male,3484
 Nermin,Female,3472
 Tahsin,Male,3460
@@ -292,7 +285,6 @@ Eray,Male,3448
 Tuğçe,Female,3436
 Sezer,Male,3425
 Anıl,Male,3413
-حسين,Male,3401
 Ezgi,Female,3390
 Ihsan,Male,3378
 Gülsüm,Female,3367
@@ -313,7 +305,6 @@ Kazım,Male,3215
 Gülcan,Female,3205
 Ayfer,Female,3195
 Nesrin,Female,3185
-خالد,Male,3175
 Nurullah,Male,3165
 Önder,Male,3155
 Yücel,Male,3145
@@ -328,8 +319,6 @@ Yunus Emre,Male,3067
 Irem,Female,3058
 Reyhan,Female,3049
 Şükran,Female,3040
-أحمد,Male,3030
-عمر,Male,3021
 Güler,Female,3012
 Türkan,Female,3003
 Hacı,Male,2994
@@ -362,7 +351,6 @@ Nevin,Female,2778
 Ertan,Male,2770
 Selda,Female,2762
 Rukiye,Female,2755
-أبو,Male,2747
 Akif,Male,2740
 Fahri,Male,2732
 İsa,Male,2725
@@ -436,9 +424,7 @@ Kezban,Female,2304
 Birsen,Female,2299
 Berke,Male,2294
 Mutlu,Male,2288
-ابراهيم,Male,2283
 Muhittin,Male,2278
-يوسف,Male,2273
 Hayri,Male,2268
 Necmettin,Male,2262
 Neşe,Female,2257
@@ -477,7 +463,6 @@ Seyhan,Male,2105
 Alev,Female,2101
 Buket,Female,2096
 İlknur,Female,2092
-عبدو,Male,2088
 Feride,Female,2083
 Suzan,Female,2079
 Bahri,Male,2075
@@ -499,3 +484,18 @@ Cevat,Male,2012
 Talip,Male,2008
 Banu,Female,2004
 Safiye,Female,2000
+Hanifi,Male,1996
+İlyas,Male,1992
+Rahmi,Male,1988
+Tunahan,Male,1984
+Didem,Female,1980
+Nilüfer,Female,1976
+Seyfettin,Male,1972
+Hayati,Female,1969
+Fehmi,Male,1965
+Gülşah,Female,1961
+Haci,Male,1957
+Hande,Female,1953
+Huriye,Female,1949
+Azra,Female,1946
+Zuhal,Female,1942
