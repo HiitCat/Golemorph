@@ -11,6 +11,11 @@ requires-python = ">=3.11"
 license = "MIT"
 dependencies = ["PyYAML>=6.0", "rich>=13.0"]
 
+[project.urls]
+Homepage = "https://github.com/HiitCat/Golemorph"
+Repository = "https://github.com/HiitCat/Golemorph"
+Issues = "https://github.com/HiitCat/Golemorph/issues"
+
 [dependency-groups]
 # names-dataset provides the source data for scripts/generate_name_data.py.
 dev = ["pytest>=8.0", "names-dataset>=3.3.0"]
