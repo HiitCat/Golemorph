@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="https://raw.githubusercontent.com/HiitCat/Golemorph/main/docs/assets/golemorph.png" alt="Golemorph logo" width="160">
+
 # Golemorph
 
 **Coherent synthetic personas for authorized red-team spearphishing engagements.**
